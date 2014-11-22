@@ -51,6 +51,8 @@ class Country
     private $code;
 
     /**
+     * Province in the country.
+     * 
      * @ORM\OneToMany(targetEntity="Region", mappedBy="country")
      * @var ArrayCollection
      */
@@ -98,6 +100,7 @@ class Country
     }
 
     /**
+     * Get local short name of the country.
      * @return string
      */
     public function getLocalShortName()
@@ -106,6 +109,7 @@ class Country
     }
 
     /**
+     * Set local short name of the country.
      * @param string $localShortName
      */
     public function setLocalShortName($localShortName)
@@ -114,6 +118,7 @@ class Country
     }
 
     /**
+     * Get country code, eg. US, PL
      * @return string
      */
     public function getCode()
@@ -122,6 +127,7 @@ class Country
     }
 
     /**
+     * Set country code.
      * @param string $code
      */
     public function setCode($code)
