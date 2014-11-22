@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: piotr
- * Date: 22.11.14
- * Time: 20:02
+ * Country class tests.
  */
 
 namespace Address\Tests;
