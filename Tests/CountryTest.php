@@ -6,11 +6,11 @@
  * Time: 20:02
  */
 
-namespace Nodus\SuperPrzedszkoleBundle\Tests;
+namespace Address\Tests;
 
 
-use Nodus\SuperPrzedszkoleBundle\Entity\Country;
-use Nodus\SuperPrzedszkoleBundle\Entity\Region;
+use Address\Entity\Country;
+use Address\Entity\Region;
 
 class CountryTest extends \PHPUnit_Framework_TestCase
 {

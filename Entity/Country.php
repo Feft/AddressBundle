@@ -1,6 +1,6 @@
 <?php
 
-namespace Nodus\SuperPrzedszkoleBundle\Entity;
+namespace Address\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -133,10 +133,10 @@ class Country
     /**
      * Add regions
      *
-     * @param \Nodus\SuperPrzedszkoleBundle\Entity\Region $region
+     * @param \Address\Entity\Region $region
      * @return Country
      */
-    public function addRegion(\Nodus\SuperPrzedszkoleBundle\Entity\Region $region)
+    public function addRegion(\Address\Entity\Region $region)
     {
         $this->regions[] = $region;
 
@@ -146,9 +146,9 @@ class Country
     /**
      * Remove regions
      *
-     * @param \Nodus\SuperPrzedszkoleBundle\Entity\Region $region
+     * @param \Address\Entity\Region $region
      */
-    public function removeRegion(\Nodus\SuperPrzedszkoleBundle\Entity\Region $region)
+    public function removeRegion(\Address\Entity\Region $region)
     {
         $this->regions->removeElement($region);
     }
