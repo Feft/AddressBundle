@@ -13,7 +13,7 @@ class CountryTest extends \PHPUnit_Framework_TestCase
 {
     public function testSettersAndGetters()
     {
-        $country = new Country("Poland", "PL");
+        $country = new \Feft\AddressBundle\Entity\Country("Poland", "PL");
         $this->assertSame("PL", $country->getCode());
         $country->setLocalShortName("Polska");
         $this->assertSame('Polska', $country->getLocalShortName());
