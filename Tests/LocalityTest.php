@@ -4,6 +4,7 @@ namespace Feft\AddressBundle\Tests;
 
 
 use Feft\AddressBundle\Entity\Locality;
+use Feft\AddressBundle\Entity\PostalCode;
 use Feft\AddressBundle\Entity\Region;
 
 class PlaceTest extends \PHPUnit_Framework_TestCase {

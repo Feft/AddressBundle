@@ -3,6 +3,7 @@
 namespace Feft\AddressBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidator;
 
 /**
  * PostalCode
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity
  */
-class PostalCode
+class PostalCode implements PostalCodeValidator
 {
     /**
      * @var integer
@@ -27,6 +28,12 @@ class PostalCode
      * @ORM\Column(name="code", type="string", length=6)
      */
     private $code;
+
+    /**
+     * @var PostalCodeValidator
+     */
+    private $validator;
+
 
 
     /**
@@ -65,16 +72,35 @@ class PostalCode
     /**
      * Validate postal code in Poland. Correct code is dd-ddd where d is digit [0-9],
      *
+     * @throws \Exception
      * @return bool
      */
     public function validate()
     {
-        if(strlen($this->getCode()) !== 6) {
-            return false;
+        if(!is_object($this->getValidator())) {
+            throw new \Exception("Missing validation method.");
         }
-        if(preg_match('/^\d{2}[-]\d{3}$/',$this->getCode()))  {
-            return true;
-        }
-        return false;
+        return $this->getValidator()->validate();
+    }
+
+    /**
+     * Get validation method.
+     * @return PostalCodeValidator
+     */
+    public function getValidator()
+    {
+        return $this->validator;
+    }
+
+    /**
+     * Set validation method.
+     *
+     * @param PostalCodeValidator $validator
+     * @return $this
+     */
+    public function setValidator(PostalCodeValidator $validator)
+    {
+        $this->validator = $validator;
+        return $this;
     }
 }

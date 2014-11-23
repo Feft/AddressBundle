@@ -4,6 +4,7 @@ namespace Feft\AddressBundle\Tests;
 
 
 use Feft\AddressBundle\Entity\PostalCode;
+use Feft\AddressBundle\Model\PostalValidator\Factory;
 
 class ZipCodeTest extends \PHPUnit_Framework_TestCase {
     private $code;
@@ -11,6 +12,8 @@ class ZipCodeTest extends \PHPUnit_Framework_TestCase {
     public function setUp()
     {
         $this->code = new PostalCode();
+        # create instance of validator for polish postal codes.
+        $this->code->setValidator(Factory::getInstance($this->code,"PL"));
     }
 
     function testCreation()
@@ -42,8 +45,19 @@ class ZipCodeTest extends \PHPUnit_Framework_TestCase {
     {
         $this->code->setCode(null);
         $this->assertFalse($this->code->validate());
-        # ta linia jest po to, żeby zrobić pełne pokrycie kodu
-//        $id = $this->object->getId();
+    }
+
+    function testException()
+    {
+        try {
+            $this->code = new PostalCode();
+            # methods throws \Exception because no validator in the object
+            $this->code->validate();
+        } catch( \Exception $e) {
+            $this->assertInstanceOf('\Exception', $e );
+        }
+
+
     }
 
 
