@@ -1,6 +1,6 @@
 <?php
 
-namespace Address\Entity;
+namespace Feft\AddressBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -88,10 +88,10 @@ class Region
     /**
      * Set country
      *
-     * @param \Address\Entity\Country $country
+     * @param \Feft\AddressBundle\Entity\Country $country
      * @return Region
      */
-    public function setCountry(\Address\Entity\Country $country = null)
+    public function setCountry(\Feft\AddressBundle\Entity\Country $country = null)
     {
         $this->country = $country;
 
@@ -101,7 +101,7 @@ class Region
     /**
      * Get country
      *
-     * @return \Address\Entity\Country
+     * @return \Feft\AddressBundle\Entity\Country
      */
     public function getCountry()
     {
@@ -112,10 +112,10 @@ class Region
     /**
      * Add localities
      *
-     * @param \Address\Entity\Locality $locality
+     * @param \Feft\AddressBundle\Entity\Locality $locality
      * @return Region
      */
-    public function addLocality(\Address\Entity\Locality $locality)
+    public function addLocality(\Feft\AddressBundle\Entity\Locality $locality)
     {
         $this->localities[] = $locality;
 
@@ -125,9 +125,9 @@ class Region
     /**
      * Remove localities
      *
-     * @param \Address\Entity\Locality $locality
+     * @param \Feft\AddressBundle\Entity\Locality $locality
      */
-    public function removeLocality(\Address\Entity\Locality $locality)
+    public function removeLocality(\Feft\AddressBundle\Entity\Locality $locality)
     {
         $this->localities->removeElement($locality);
     }

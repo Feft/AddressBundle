@@ -3,11 +3,11 @@
  * Country class tests.
  */
 
-namespace Address\Tests;
+namespace Feft\AddressBundle\Tests;
 
 
-use Address\Entity\Country;
-use Address\Entity\Region;
+use Feft\AddressBundle\Entity\Country;
+use Feft\AddressBundle\Entity\Region;
 
 class CountryTest extends \PHPUnit_Framework_TestCase
 {
