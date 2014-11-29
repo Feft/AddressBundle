@@ -6,7 +6,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Piotr Pikuła"
+            "name": "Piotr Pikuła",
+            "email": "piotrpikula@gmail.com"
         }
     ],
     "require": {
