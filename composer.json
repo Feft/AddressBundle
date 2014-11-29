@@ -1,0 +1,24 @@
+{
+    "name": "Feft/AddressBundle",
+    "type": "symfony-bundle",
+    "description": "This is a Symfony2 bundle that lets using international mailing address.",
+    "keywords": ["address", "post"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Piotr Pikuła"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.1"
+    },
+    "suggest": {
+        "doctrine/doctrine-bundle": "~1.1",
+        "doctrine/orm": "~2.3"
+    },
+    "autoload": {
+        "psr-0": { "Feft\\AddressBundle": "" }
+    },
+    "target-dir": "Feft/AddressBundle"
+}
