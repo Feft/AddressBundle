@@ -3,6 +3,7 @@
     "type": "symfony-bundle",
     "description": "This is a Symfony2 bundle that lets using international mailing address.",
     "keywords": ["address", "post", "postal", "validator"],
+    "homepage": "https://github.com/Feft/AddressBundle",
     "license": "MIT",
     "authors": [
         {
