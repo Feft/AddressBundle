@@ -6,7 +6,7 @@ namespace Feft\AddressBundle\Tests;
 use Feft\AddressBundle\Entity\PostalCode;
 use Feft\AddressBundle\Model\PostalValidator\Factory;
 
-class ZipCodeTest extends \PHPUnit_Framework_TestCase {
+class PostalCodeTest extends \PHPUnit_Framework_TestCase {
     private $code;
 
     public function setUp()

@@ -14,7 +14,7 @@ class PLPostalCodeValidatorTest extends \PHPUnit_Framework_TestCase {
         $this->validator = Factory::getInstance($this->code,"PL");
     }
 
-    public function testCreation()
+    public function testCodeCreation()
     {
         $this->assertInstanceOf('Feft\AddressBundle\Entity\PostalCode', $this->code);
         $this->assertNull($this->code->getId());
