@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @link http://www.iso.org/iso/country_codes.htm
  * @link http://en.wikipedia.org/wiki/ISO_3166
  *
- * @ORM\Table()
+ * @ORM\Table(name="country")
  * @ORM\Entity
  */
 class Country
@@ -111,10 +111,12 @@ class Country
     /**
      * Set local short name of the country.
      * @param string $localShortName
+     * @return $this
      */
     public function setLocalShortName($localShortName)
     {
         $this->localShortName = $localShortName;
+        return $this;
     }
 
     /**
@@ -129,10 +131,12 @@ class Country
     /**
      * Set country code.
      * @param string $code
+     * @return $this
      */
     public function setCode($code)
     {
         $this->code = $code;
+        return $this;
     }
 
 

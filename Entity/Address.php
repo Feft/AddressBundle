@@ -15,7 +15,7 @@ use Feft\AddressBundle\Entity\Street;
  * For more information see:
  * @link http://www.bitboost.com/ref/international-address-formats.html#Formats
  *
- * @ORM\Table()
+ * @ORM\Table(name="address")
  * @ORM\Entity(repositoryClass="Feft\AddressBundle\Repository\AddressRepository")
  * @author Feft
  */
@@ -34,6 +34,7 @@ class Address
     /**
      * Country
      *
+     * @var Country
      * @ORM\ManyToOne(targetEntity="Country")
      * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
      **/
@@ -43,6 +44,7 @@ class Address
     /**
      * Region, subdivision, province.
      *
+     * @var Region
      * @ORM\ManyToOne(targetEntity="Region")
      * @ORM\JoinColumn(name="region_id", referencedColumnName="id")
      **/
@@ -52,6 +54,7 @@ class Address
     /**
      * Locality: town, village
      *
+     * @var Locality
      * @ORM\ManyToOne(targetEntity="Locality")
      * @ORM\JoinColumn(name="place_id", referencedColumnName="id")
      **/
@@ -61,6 +64,7 @@ class Address
     /**
      * Postal code, zip code.
      *
+     * @var PostalCode
      * @ORM\ManyToOne(targetEntity="PostalCode")
      * @ORM\JoinColumn(name="postal_code_id", referencedColumnName="id")
      **/
@@ -69,6 +73,7 @@ class Address
     /**
      * Name of the street. In this project its object.
      *
+     * @var Street
      * @ORM\ManyToOne(targetEntity="Street")
      * @ORM\JoinColumn(name="street_id", referencedColumnName="id")
      **/
@@ -80,7 +85,7 @@ class Address
      *
      * @var string
      *
-     * @ORM\Column(name="number", type="string", length=30)
+     * @ORM\Column(name="number", type="string", length=30, nullable=true)
      */
     private $number;
 

@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Street
  *
- * @ORM\Table()
+ * @ORM\Table(name="street")
  * @ORM\Entity
  */
 class Street
@@ -22,6 +22,7 @@ class Street
     private $id;
 
     /**
+     * Street name
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=150)

@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Region
  *
- * @ORM\Table()
+ * @ORM\Table(name="region")
  * @ORM\Entity
  */
 class Region
@@ -23,6 +23,7 @@ class Region
     private $id;
 
     /**
+     * Region name
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=100)
@@ -30,6 +31,7 @@ class Region
     private $name;
 
     /**
+     * Region country.
      * @ORM\ManyToOne(targetEntity="Country", inversedBy="regions")
      * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
      * @var Country;
@@ -38,6 +40,8 @@ class Region
 
 
     /**
+     * Region localities.
+     *
      * @ORM\OneToMany(targetEntity="Locality", mappedBy="region")
      * @var Locality
      */

@@ -8,7 +8,7 @@ use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidator;
 /**
  * PostalCode
  *
- * @ORM\Table()
+ * @ORM\Table(name="postal_code")
  * @ORM\Entity
  */
 class PostalCode implements PostalCodeValidator
@@ -23,6 +23,8 @@ class PostalCode implements PostalCodeValidator
     private $id;
 
     /**
+     * Postal code.
+     *
      * @var string
      *
      * @ORM\Column(name="code", type="string", length=6)
@@ -30,6 +32,8 @@ class PostalCode implements PostalCodeValidator
     private $code;
 
     /**
+     * Postal code validator.
+     *
      * @var PostalCodeValidator
      */
     private $validator;

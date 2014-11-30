@@ -8,7 +8,7 @@ use Feft\AddressBundle\Entity\Region;
 /**
  * Locality
  *
- * @ORM\Table()
+ * @ORM\Table(name="locality")
  * @ORM\Entity
  */
 class Locality
@@ -23,6 +23,7 @@ class Locality
     private $id;
 
     /**
+     * Locality name, eg. New York.
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=100)
@@ -30,6 +31,8 @@ class Locality
     private $name;
 
     /**
+     * Region.
+     *
      * @ORM\ManyToOne(targetEntity="Region", inversedBy="localities")
      * @ORM\JoinColumn(name="region_id", referencedColumnName="id")
      * @var Region
