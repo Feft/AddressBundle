@@ -9,5 +9,10 @@ namespace Feft\AddressBundle\Model\PostalValidator;
      * @package Feft\AddressBundle\Model
      */
     interface PostalCodeValidator {
+        /**
+         * Validate postal code.
+         *
+         * @return bool
+         */
         public function validate();
     }
