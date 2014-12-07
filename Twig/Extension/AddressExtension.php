@@ -15,7 +15,7 @@ class AddressExtension extends \Twig_Extension {
     public function getFilters()
     {
         return array(
-            new \Twig_Filter_Function('\Feft\AddressBundle\Helper\AddressFormatter::formatter')
+            'address_formatter' => new \Twig_Filter_Function('\Feft\AddressBundle\Helper\AddressFormatter::formatter')
         );
     }
 
