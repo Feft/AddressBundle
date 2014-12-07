@@ -5,10 +5,6 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <!--
-    <parameters>
-        <parameter key="feft_test.example.class">Feft\TestBundle\Example</parameter>
-    </parameters>
-
     <services>
         <service id="feft_address.example" class="%feft_address.example.class%">
             <argument type="service" id="service_id" />
@@ -17,8 +13,13 @@
         </service>
     </services>
     -->
+
+    <parameters>
+        <parameter key="feft_address.twig.address_extension.class">Feft\AddressBundle\Twig\Extension\AddressExtension</parameter>
+    </parameters>
+
     <services>
-        <service id="address_formatter_extension" class="Feft\AddressBundle\Twig\Extension\AddressExtension" public="false">
+        <service id="feft_address.twig.address_extension" class="%feft_address.twig.address_extension.class%" public="false">
             <tag name="twig.extension" />
         </service>
     </services>
