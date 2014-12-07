@@ -21,7 +21,26 @@ Now run the `install` command.
 ```sh
 $ php composer.phar install
 ```
+Enable the bundle
+-----------------
+Enable the bundle in the kernel:
+```php
+<?php
+// app/AppKernel.php
 
+public function registerBundles()
+{
+    $bundles = array(
+        // ...
+        new \Feft\AddressBundle\FeftAddressBundle(),
+    );
+}
+```
+Update doctrine schema
+----------------------
+```sh
+$ php app/console doctrine:schema:update --dump-sql
+```
 Usage
 -----
 Controller file:  
@@ -85,4 +104,9 @@ Region: śląskie
 street: Wolności 20 m. 21  
 Zip code and Locality: 43-100 Tychy  
 
+Authors
+-------
+The bundle was created by Piotr Pikuła. See the list of [contributors][2].
+
 [1]: http://getcomposer.org/
+[2]: https://github.com/Feft/AddressBundle/graphs/contributors
