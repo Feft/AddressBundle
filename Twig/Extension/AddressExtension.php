@@ -12,7 +12,10 @@ use Feft\AddressBundle\Entity\Address;
  */
 class AddressExtension extends \Twig_Extension {
 
-    public function getFilters()
+    /**
+     * {@inheritdoc}
+     */
+    public function getFunctions()
     {
         return array(
             'address_formatter' => new \Twig_Function_Method($this, 'formatter')
@@ -26,11 +29,8 @@ class AddressExtension extends \Twig_Extension {
         return $text;
     }
 
-
     /**
-     * Returns the name of the extension.
-     *
-     * @return string The extension name
+     * {@inheritdoc}
      */
     public function getName()
     {
