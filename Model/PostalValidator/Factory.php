@@ -11,7 +11,7 @@ class Factory {
      * Using __NAMESPACE__ constant.
      *
      * @param PostalCode $postalCode
-     * @param $countryAlpha2Code Two-letter code (ISO 3166)
+     * @param string $countryAlpha2Code Two-letter code (ISO 3166)
      * @return PostalCodeValidator
      */
     public static function getInstance(PostalCode $postalCode, $countryAlpha2Code)
