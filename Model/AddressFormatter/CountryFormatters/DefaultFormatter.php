@@ -24,6 +24,6 @@ class DefaultFormatter implements IAddressFormatter {
         /**
          * @todo to write
          */
-        return "";
+        return "my default formatted address";
     }
 } 
