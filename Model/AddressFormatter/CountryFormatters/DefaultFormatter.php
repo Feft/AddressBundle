@@ -16,7 +16,14 @@ class DefaultFormatter implements IAddressFormatter {
         $this->address = $address;
     }
 
-    public function getFormattedAddress() {
+    /**
+     * The default layout of an address on the envelope
+     * @inheritdoc
+     */
+    public function getFormattedAddress($options = array()) {
+        /**
+         * @todo to write
+         */
         return "";
     }
 } 
