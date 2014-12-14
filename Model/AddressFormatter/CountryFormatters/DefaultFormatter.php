@@ -10,7 +10,7 @@ class DefaultFormatter implements IAddressFormatter {
     /**
      * @var Address
      */
-    private $address;
+    protected $address;
 
     function __construct(Address $address) {
         $this->address = $address;
@@ -18,7 +18,7 @@ class DefaultFormatter implements IAddressFormatter {
 
     /**
      * The default layout of an address on the envelope
-     * @inheritdoc
+     *
      */
     public function getFormattedAddress($options = array()) {
         /**
@@ -26,4 +26,32 @@ class DefaultFormatter implements IAddressFormatter {
          */
         return "my default formatted address";
     }
+
+    /**
+     * Add country name (and prefix: new line) to the address if options showCountryName is true.
+     *
+     * @param array $options array options
+     * @return string
+     */
+    protected function getCountryName($options)
+    {
+        $countryName = "";
+        if(array_key_exists('showCountryName',$options)) {
+            if($options["showCountryName"] === true) {
+                $countryName = "\r\n".$this->getAddress()->getCountry()->getName();
+            }
+        }
+        return $countryName;
+    }
+
+    /**
+     * Get address.
+     * @return Address
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+
 } 
