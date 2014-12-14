@@ -28,13 +28,15 @@ class AddressExtension extends \Twig_Extension {
      * Format address.
      *
      * @param Address $address address to write on envelope
+     * @param array $options formatting options
      * @return string formatted address
      */
-    public function formatter(Address $address)
+    public function formatter(Address $address, array $options = array())
     {
         $factory = new Factory();
         $formatter = $factory->getInstance($address);
-        return $formatter->getFormattedAddress();
+
+        return nl2br($formatter->getFormattedAddress($options));
     }
 
     /**
