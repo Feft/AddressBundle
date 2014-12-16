@@ -93,11 +93,13 @@ Controller file:
 Twig file:
 ```twig
   <p> {{ address_formatter(address,options)|raw }} </p>
+  <p>or inline format: {{ address_inline_formatter(address,options) }} </p>
 ```
 Html result:  
   Wolności 20 m. 21  
   43-100 Tychy  
-  Poland   
+  Poland  
+or inline format: Wolności 20 m. 21, 43-100 Tychy, Poland
 
 Authors
 -------
