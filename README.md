@@ -82,27 +82,22 @@ Controller file:
   
   $codeValidatingResult = $code->validate();
   
+  $options = array("showCountryName" => true);
+    
   return array(
-            'address' => $address
-        );
+    'address' => $address,
+    "options" => $options
+  );
         
 ```
 Twig file:
 ```twig
-  <h3>Address</h3>
-  <p>
-      Country: {{ address.getCountry.getName }}, local name: {{ address.getCountry.getLocalShortName }} <br />
-      Region: {{ address.getRegion.getName }} <br />
-      street: {{ address.getStreet.getName }} {{ address.getNumber }} <br />
-      Zip code and Locality: {{ address.getPostalCode.getCode }} {{ address.getLocality.getName }} <br />
-  </p>
+  <p> {{ address_formatter(address,options)|raw }} </p>
 ```
 Html result:  
-### Address  
-Country: Poland, local name: Polska  
-Region: śląskie  
-street: Wolności 20 m. 21  
-Zip code and Locality: 43-100 Tychy  
+  Wolności 20 m. 21  
+  43-100 Tychy  
+  Poland   
 
 Authors
 -------
