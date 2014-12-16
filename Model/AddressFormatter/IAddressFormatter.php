@@ -9,5 +9,5 @@ interface IAddressFormatter {
      * @param array $options options for formatting - to write
      * @return string
      */
-    public function getFormattedAddress($options = array());
+    public function getEnvelopeFormattedAddress(array $options = array());
 } 
