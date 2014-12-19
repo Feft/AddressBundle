@@ -65,7 +65,7 @@ class DefaultFormatter implements IAddressFormatter {
     public function getEnvelopeFormattedAddress(array $options = array()) {
         return
             $this->getAddress()->getStreet()->getName()." ".
-            $this->getAddress()->getNumber()."\r\n".
+            $this->getAddress()->getNumber() . $this->defaultLineEnding .
             $this->getAddress()->getPostalCode()->getCode()." ".
             $this->getAddress()->getLocality()->getName().
             $this->getCountryName($options)
