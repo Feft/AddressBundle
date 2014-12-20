@@ -13,6 +13,8 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface
 {
     /**
+     * Configuration interface
+     *
      * {@inheritDoc}
      */
     public function getConfigTreeBuilder()

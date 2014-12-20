@@ -5,10 +5,15 @@ namespace Feft\AddressBundle\Model\PostalValidator;
 
 use Feft\AddressBundle\Entity\PostalCode;
 
+/**
+ * Base for postal code validators.
+ *
+ * @package Feft\AddressBundle\Model\PostalValidator
+ */
 abstract class AbstractPostalCodeValidator implements PostalCodeValidator  {
 
     /**
-     *
+     * Postal code to validate.
      * @var PostalCode;
      */
     protected $postalCode;

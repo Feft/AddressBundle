@@ -5,6 +5,11 @@ namespace Feft\AddressBundle\Model\PostalValidator;
 
 use Feft\AddressBundle\Entity\PostalCode;
 
+/**
+ * Get specific postal validator
+ * from country alpha2code string.
+ * @package Feft\AddressBundle\Model\PostalValidator
+ */
 class Factory {
     /**
      * Get specific validator.

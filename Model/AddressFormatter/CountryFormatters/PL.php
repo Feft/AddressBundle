@@ -4,6 +4,11 @@ namespace Feft\AddressBundle\Model\AddressFormatter\CountryFormatters;
 
 use Feft\AddressBundle\Entity\Address;
 
+/**
+ * Polish version of address format on envelope.
+ *
+ * @package Feft\AddressBundle\Model\AddressFormatter\CountryFormatters
+ */
 class PL extends DefaultFormatter {
 
     /**

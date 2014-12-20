@@ -2,7 +2,10 @@
 
 namespace Feft\AddressBundle\Model\AddressFormatter;
 
-
+/**
+ * Interface IAddressFormatter
+ * @package Feft\AddressBundle\Model\AddressFormatter
+ */
 interface IAddressFormatter {
     /**
      * Get formatted address as string for envelope.
