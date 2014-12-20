@@ -2,7 +2,6 @@
 
 namespace Feft\AddressBundle\Twig\Extension;
 
-
 use Feft\AddressBundle\Entity\Address;
 use Feft\AddressBundle\Helper\InlineAddressFormatter;
 

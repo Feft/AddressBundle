@@ -1,9 +1,6 @@
 <?php
 namespace Feft\AddressBundle\Model\AddressFormatter\CountryFormatters;
 
-
-use Feft\AddressBundle\Entity\Address;
-
 /**
  * Polish version of address format on envelope.
  *
