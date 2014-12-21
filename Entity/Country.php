@@ -4,6 +4,7 @@ namespace Feft\AddressBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Feft\AddressBundle\Entity\Region;
 
 /**
  * Country.
@@ -27,7 +28,8 @@ class Country
      */
     private $id;
     /**
-     * Short name from ISO 3166 — Codes for the representation of names of countries and their subdivisions
+     * Short name from ISO 3166 — Codes for the representation of names of countries and their subdivisions,
+     * eg. Poland.
      *
      * @var string
      *
@@ -139,14 +141,13 @@ class Country
         return $this;
     }
 
-
     /**
-     * Add regions
+     * Add region to the country.
      *
-     * @param \Feft\AddressBundle\Entity\Region $region
+     * @param Region $region Region of the country to join
      * @return Country
      */
-    public function addRegion(\Feft\AddressBundle\Entity\Region $region)
+    public function addRegion(Region $region)
     {
         $this->regions[] = $region;
 
@@ -154,11 +155,11 @@ class Country
     }
 
     /**
-     * Remove regions
+     * Remove region from the country
      *
-     * @param \Feft\AddressBundle\Entity\Region $region
+     * @param Region $region
      */
-    public function removeRegion(\Feft\AddressBundle\Entity\Region $region)
+    public function removeRegion(Region $region)
     {
         $this->regions->removeElement($region);
     }
