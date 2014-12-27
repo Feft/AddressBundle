@@ -26,7 +26,7 @@ class FactoryTest extends PHPUnit_Framework_TestCase {
         $formatter = $this->factory->getInstance($this->address);
 
         $this->assertInstanceOf(
-            "\Feft\AddressBundle\Model\AddressFormatter\CountryFormatters\PL",
+            "\Feft\AddressBundle\Model\AddressFormatter\CountryFormatters\DefaultFormatter",
             $formatter);
     }
 

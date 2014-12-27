@@ -17,7 +17,7 @@ class Factory {
      * from country alpha2code string.
      *
      * @param Address $address
-     * @return DefaultFormatter
+     * @return AbstractFormatter
      */
     public function getInstance(Address $address)
     {
