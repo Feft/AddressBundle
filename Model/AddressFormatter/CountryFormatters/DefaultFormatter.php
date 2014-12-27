@@ -42,16 +42,11 @@ class DefaultFormatter extends AbstractFormatter implements AddressFormatterInte
      * @return string
      */
     public function getInlineFormattedAddress(array $options = array()) {
-
-        $countryName = $this->getCountryName($options);
-        if(strlen($countryName) > 0) {
-            $countryName = $this->config->getInLineAddressSectionSeparator() . $countryName;
-        }
-
+        # adding line separator in $this->getCountryName method
         return $this->getAddress()->getStreet()->getName()." ".
             $this->getAddress()->getNumber(). $this->config->getInLineAddressSectionSeparator() .
             $this->getAddress()->getPostalCode()->getCode()." ".
             $this->getAddress()->getLocality()->getName().
-            $countryName;
+            $this->getCountryName($options);
     }
 }

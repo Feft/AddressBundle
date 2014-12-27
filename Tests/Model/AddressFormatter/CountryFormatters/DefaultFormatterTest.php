@@ -62,6 +62,16 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
         $this->assertNotContains(PHP_EOL,$string);
     }
 
+    public function testGetInlineFormattedAddressWithCountryName()
+    {
+        $options["showCountryName"] = true;
+        $options["formatType"] = 'inline';
+        $string = $this->formatter->getInlineFormattedAddress($options);
+
+        $this->assertContains(", Poland",$string);
+    }
+
+
     public function testGetEnvelopeFormattedAddress()
     {
         $string = $this->formatter->getEnvelopeFormattedAddress(array());

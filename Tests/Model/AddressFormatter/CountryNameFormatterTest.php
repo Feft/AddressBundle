@@ -89,4 +89,15 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
             $this->countryNameFormatter->getFormattedCountryName( $this->country,$this->options)
         );
     }
+
+    public function testInlineFormatWithCountryName()
+    {
+        $this->options["showCountryName"] = true;
+        $this->options["formatType"] = "inline";
+
+        $this->assertSame(
+            $this->countryNameFormatter->getConfig()->getInLineAddressSectionSeparator()."Poland",
+            $this->countryNameFormatter->getFormattedCountryName( $this->country,$this->options)
+        );
+    }
 }
