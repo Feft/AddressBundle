@@ -55,6 +55,13 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
         );
     }
 
+    public function testGetInlineFormattedAddress()
+    {
+        $string = $this->formatter->getInlineFormattedAddress(array());
+
+        $this->assertNotContains(PHP_EOL,$string);
+    }
+
     public function testGetEnvelopeFormattedAddress()
     {
         $string = $this->formatter->getEnvelopeFormattedAddress(array());

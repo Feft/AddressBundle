@@ -18,11 +18,22 @@ class CountryNameFormatter {
      */
     protected $config;
 
-    function __construct()
+    public function __construct()
     {
         # formatter configuration
         $this->config = new Config();
     }
+
+    /**
+     * Get configuration.
+     *
+     * @return Config
+     */
+    public function getConfig()
+    {
+        return $this->config;
+    }
+
 
     /**
      * Add to country name end of line symbol.
@@ -61,7 +72,9 @@ class CountryNameFormatter {
         }
 
         if($options["formatType"] === "envelope") {
-            return $this->config->getEndOfLine();
+            return $this->getConfig()->getEndOfLine();
+        } elseif($options["formatType"] === "inline") {
+            return $this->getConfig()->getInLineAddressSectionSeparator();
         }
         return "";
     }
