@@ -4,14 +4,14 @@ namespace Feft\AddressBundle\Model\AddressFormatter\CountryFormatters;
 use Feft\AddressBundle\Entity\Address;
 use Feft\AddressBundle\Model\AddressFormatter\Config;
 use Feft\AddressBundle\Model\AddressFormatter\CountryNameFormatter;
-use Feft\AddressBundle\Model\AddressFormatter\IAddressFormatter;
+use Feft\AddressBundle\Model\AddressFormatter\AddressFormatterInterface;
 
 /**
  * Class AbstractFormatter.
  *
  * @package Feft\AddressBundle\Model\AddressFormatter\CountryFormatters
  */
-abstract class AbstractFormatter implements IAddressFormatter {
+abstract class AbstractFormatter implements AddressFormatterInterface {
     /**
      * Address to format.
      * @var Address

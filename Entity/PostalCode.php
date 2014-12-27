@@ -3,7 +3,7 @@
 namespace Feft\AddressBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidator;
+use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidatorInterface;
 
 /**
  * PostalCode
@@ -11,7 +11,7 @@ use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidator;
  * @ORM\Table(name="postal_code")
  * @ORM\Entity
  */
-class PostalCode implements PostalCodeValidator
+class PostalCode implements PostalCodeValidatorInterface
 {
     /**
      * @var integer
@@ -34,7 +34,7 @@ class PostalCode implements PostalCodeValidator
     /**
      * Postal code validator.
      *
-     * @var PostalCodeValidator
+     * @var PostalCodeValidatorInterface
      */
     private $validator;
 
@@ -89,7 +89,7 @@ class PostalCode implements PostalCodeValidator
 
     /**
      * Get validation method.
-     * @return PostalCodeValidator
+     * @return PostalCodeValidatorInterface
      */
     public function getValidator()
     {
@@ -99,10 +99,10 @@ class PostalCode implements PostalCodeValidator
     /**
      * Set validation method.
      *
-     * @param PostalCodeValidator $validator
+     * @param PostalCodeValidatorInterface $validator
      * @return $this
      */
-    public function setValidator(PostalCodeValidator $validator)
+    public function setValidator(PostalCodeValidatorInterface $validator)
     {
         $this->validator = $validator;
         return $this;

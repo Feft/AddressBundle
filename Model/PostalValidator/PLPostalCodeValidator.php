@@ -9,7 +9,7 @@ use Feft\AddressBundle\Entity\PostalCode;
  *
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-class PLPostalCodeValidator extends AbstractPostalCodeValidator implements PostalCodeValidator  {
+class PLPostalCodeValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface  {
 
     /**
      * Run parent constructor - set postalCode attribute.

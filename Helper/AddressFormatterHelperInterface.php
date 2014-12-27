@@ -9,7 +9,7 @@ use Feft\AddressBundle\Entity\Address;
  *
  * @package Feft\AddressBundle\Helper
  */
-interface IAddressFormatterHelper {
+interface AddressFormatterHelperInterface {
     /**
      * Get formatted address.
      *

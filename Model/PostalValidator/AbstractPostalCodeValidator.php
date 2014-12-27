@@ -2,7 +2,6 @@
 
 namespace Feft\AddressBundle\Model\PostalValidator;
 
-
 use Feft\AddressBundle\Entity\PostalCode;
 
 /**
@@ -10,7 +9,7 @@ use Feft\AddressBundle\Entity\PostalCode;
  *
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-abstract class AbstractPostalCodeValidator implements PostalCodeValidator  {
+abstract class AbstractPostalCodeValidator implements PostalCodeValidatorInterface  {
 
     /**
      * Postal code to validate.

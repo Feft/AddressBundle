@@ -2,7 +2,6 @@
 
 namespace Feft\AddressBundle\Model\PostalValidator;
 
-
 use Feft\AddressBundle\Entity\PostalCode;
 
 /**
@@ -17,7 +16,7 @@ class Factory {
      *
      * @param PostalCode $postalCode
      * @param string $countryAlpha2Code Two-letter code (ISO 3166)
-     * @return PostalCodeValidator
+     * @return PostalCodeValidatorInterface
      */
     public static function getInstance(PostalCode $postalCode, $countryAlpha2Code)
     {

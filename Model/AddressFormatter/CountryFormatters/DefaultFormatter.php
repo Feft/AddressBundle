@@ -3,7 +3,7 @@
 namespace Feft\AddressBundle\Model\AddressFormatter\CountryFormatters;
 
 
-use Feft\AddressBundle\Model\AddressFormatter\IAddressFormatter;
+use Feft\AddressBundle\Model\AddressFormatter\AddressFormatterInterface;
 
 /**
  * Default methods for address format.
@@ -18,7 +18,7 @@ use Feft\AddressBundle\Model\AddressFormatter\IAddressFormatter;
  *
  * @package Feft\AddressBundle\Model\AddressFormatter\CountryFormatters
  */
-class DefaultFormatter extends AbstractFormatter implements IAddressFormatter {
+class DefaultFormatter extends AbstractFormatter implements AddressFormatterInterface {
     /**
      * The default layout of an address on the envelope
      *

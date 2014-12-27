@@ -4,11 +4,11 @@
 namespace Feft\AddressBundle\Model\PostalValidator;
 
     /**
-     * Interface PostalCodeValidator
+     * Interface PostalCodeValidatorInterface
      *
      * @package Feft\AddressBundle\Model
      */
-    interface PostalCodeValidator {
+    interface PostalCodeValidatorInterface {
         /**
          * Validate postal code.
          *

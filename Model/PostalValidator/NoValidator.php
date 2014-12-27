@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: piotr
- * Date: 23.11.14
- * Time: 16:01
- */
-
 namespace Feft\AddressBundle\Model\PostalValidator;
 
 
@@ -18,7 +11,7 @@ use Feft\AddressBundle\Entity\PostalCode;
  *
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-class NoValidator extends AbstractPostalCodeValidator {
+class NoValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface {
     function __construct(PostalCode $postalCode)
     {
         parent::__construct($postalCode);

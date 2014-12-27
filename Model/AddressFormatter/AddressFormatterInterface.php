@@ -3,10 +3,10 @@
 namespace Feft\AddressBundle\Model\AddressFormatter;
 
 /**
- * Interface IAddressFormatter
+ * Interface AddressFormatterInterface
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
-interface IAddressFormatter {
+interface AddressFormatterInterface {
     /**
      * Get formatted address as string for envelope.
      * @param array $options options for formatting - to write

@@ -10,7 +10,7 @@ use Feft\AddressBundle\Entity\Address;
  * Helper for Twig.
  * @package Feft\AddressBundle\Helper
  */
-class InlineAddressFormatter extends AddressFormatter implements IAddressFormatterHelper {
+class InlineAddressFormatter extends AddressFormatter implements AddressFormatterHelperInterface {
     /**
      * Get formatted address.
      * For more information see:

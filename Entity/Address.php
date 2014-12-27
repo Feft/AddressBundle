@@ -195,7 +195,7 @@ class Address
     /**
      * Set postalCode.
      * If you want to validate postal code, create new validator class (for your country).
-     * @see Model/PostalValidator/PostalCodeValidator.php
+     * @see Model/PostalValidator/PostalCodeValidatorInterface.php
      *
      * @param PostalCode $postalCode
      * @return Address
