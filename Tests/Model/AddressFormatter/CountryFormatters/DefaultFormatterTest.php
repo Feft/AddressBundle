@@ -68,7 +68,9 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
         $options["formatType"] = 'inline';
         $string = $this->formatter->getInlineFormattedAddress($options);
 
-        $this->assertContains(", Poland",$string);
+        $config = new \Feft\AddressBundle\Model\AddressFormatter\Config();
+
+        $this->assertContains($config->getInLineAddressSectionSeparator()."Poland",$string);
     }
 
 
