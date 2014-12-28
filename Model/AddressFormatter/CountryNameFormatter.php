@@ -12,28 +12,10 @@ use Feft\AddressBundle\Entity\Country;
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
 class CountryNameFormatter {
-    /**
-     * Config for formatter.
-     * @var Config
-     */
-    protected $config;
 
     public function __construct()
     {
-        # formatter configuration
-        $this->config = new Config();
     }
-
-    /**
-     * Get configuration.
-     *
-     * @return Config
-     */
-    public function getConfig()
-    {
-        return $this->config;
-    }
-
 
     /**
      * Add to country name end of line symbol.
@@ -44,37 +26,15 @@ class CountryNameFormatter {
      */
     public function getFormattedCountryName(Country $country, array $options = array())
     {
-
         # if no key in array
         if(false === array_key_exists('showCountryName',$options)) {
             return "";
         }
         # if the country name should be show
         if(true === $options["showCountryName"]) {
-            return $this->getLineEndString($options) .
+            $lineEndCreator = new EndOfLineCreator();
+            return $lineEndCreator->generateEndOfLineString($options) .
             $country->getName();
-        }
-        return "";
-    }
-
-    /**
-     * If format type is for envelope return line ending symbol (eg. \r\n)
-     * No line ending if inline format type.
-     *
-     * @param array $options
-     * @return string
-     */
-    private function getLineEndString(array $options = array())
-    {
-        # if no key in array
-        if(false === array_key_exists('formatType',$options)) {
-            return "";
-        }
-
-        if($options["formatType"] === "envelope") {
-            return $this->getConfig()->getEndOfLine();
-        } elseif($options["formatType"] === "inline") {
-            return $this->getConfig()->getInLineAddressSectionSeparator();
         }
         return "";
     }

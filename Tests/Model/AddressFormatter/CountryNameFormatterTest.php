@@ -5,17 +5,19 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
     private $countryNameFormatter;
     private $options;
     private $country;
+    private $config;
 
     public function setUp()
     {
         $this->options = array();
         $this->country = new \Feft\AddressBundle\Entity\Country("Poland","PL");
         $this->countryNameFormatter = new \Feft\AddressBundle\Model\AddressFormatter\CountryNameFormatter();
+        $this->config = new \Feft\AddressBundle\Model\AddressFormatter\Config();
     }
 
     public function testConstructor()
     {
-        $this->assertInstanceOf("\Feft\AddressBundle\Model\AddressFormatter\Config",$this->countryNameFormatter->getConfig());
+        $this->assertInstanceOf("\Feft\AddressBundle\Model\AddressFormatter\Config",$this->config);
         $this->assertInstanceOf("\Feft\AddressBundle\Model\AddressFormatter\CountryNameFormatter", $this->countryNameFormatter);
     }
 
@@ -46,6 +48,8 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
     public function testFormatTypeOption()
     {
         $this->options["showCountryName"] = true;
+//        $lineEndCreator = new \Feft\AddressBundle\Model\AddressFormatter\EndOfLineCreator();
+
 
         $this->options["formatType"] = "FooBar";
         $this->assertSame(
@@ -55,13 +59,13 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
 
         $this->options["formatType"] = "inline";
         $this->assertSame(
-            $this->countryNameFormatter->getConfig()->getInLineAddressSectionSeparator()."Poland",
+            $this->config->getInLineAddressSectionSeparator()."Poland",
             $this->countryNameFormatter->getFormattedCountryName( $this->country,$this->options)
         );
 
         $this->options["formatType"] = "envelope";
         $this->assertSame(
-            $this->countryNameFormatter->getConfig()->getEndOfLine()."Poland",
+            $this->config->getEndOfLine()."Poland",
             $this->countryNameFormatter->getFormattedCountryName( $this->country,$this->options)
         );
     }
@@ -96,7 +100,7 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
         $this->options["formatType"] = "inline";
 
         $this->assertSame(
-            $this->countryNameFormatter->getConfig()->getInLineAddressSectionSeparator()."Poland",
+            $this->config->getInLineAddressSectionSeparator()."Poland",
             $this->countryNameFormatter->getFormattedCountryName( $this->country,$this->options)
         );
     }
