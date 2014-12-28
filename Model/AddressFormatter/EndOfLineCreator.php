@@ -14,13 +14,12 @@ class EndOfLineCreator {
      * and formatType option.
      *
      * @param array $options Table of formatting options
+     * @param Config $config Configuration class
      *
      * @return string End of line symbol
      */
-    public function generateEndOfLineString(array $options)
+    public function generateEndOfLineString(array $options, Config $config)
     {
-        $config = new Config();
-
         # if no key in array
         if(false === array_key_exists('formatType',$options)) {
             return "";

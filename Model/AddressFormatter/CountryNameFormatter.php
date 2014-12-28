@@ -33,7 +33,7 @@ class CountryNameFormatter {
         # if the country name should be show
         if(true === $options["showCountryName"]) {
             $lineEndCreator = new EndOfLineCreator();
-            return $lineEndCreator->generateEndOfLineString($options) .
+            return $lineEndCreator->generateEndOfLineString($options, new Config()) .
             $country->getName();
         }
         return "";
