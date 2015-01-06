@@ -1,3 +1,5 @@
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/12bb57cb-483e-41a1-b026-948d8f388d22/big.png)](https://insight.sensiolabs.com/projects/12bb57cb-483e-41a1-b026-948d8f388d22)
+
 Address
 =======
 
