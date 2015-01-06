@@ -35,4 +35,5 @@ abstract class AddressFormatter implements AddressFormatterHelperInterface
     {
         return $this->factory->getInstance($address);
     }
+
 }

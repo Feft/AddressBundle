@@ -41,4 +41,5 @@ class PLPostalCodeValidator extends AbstractPostalCodeValidator implements Posta
         }
         return false;
     }
+
 }

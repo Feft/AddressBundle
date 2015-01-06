@@ -14,4 +14,4 @@ interface AddressFormatterInterface
      * @return string
      */
     public function getEnvelopeFormattedAddress(array $options = array());
-} 
+}

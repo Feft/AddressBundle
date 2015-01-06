@@ -18,4 +18,4 @@ class NoValidator extends AbstractPostalCodeValidator implements PostalCodeValid
         parent::__construct($postalCode);
     }
 
-} 
+}

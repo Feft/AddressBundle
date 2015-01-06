@@ -51,4 +51,5 @@ class DefaultFormatter extends AbstractFormatter implements AddressFormatterInte
         $this->getAddress()->getLocality()->getName() .
         $this->getCountryName($options);
     }
+
 }

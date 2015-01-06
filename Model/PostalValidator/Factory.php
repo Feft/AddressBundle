@@ -29,4 +29,5 @@ class Factory
             return new NoValidator($postalCode);
         }
     }
+
 }

@@ -28,4 +28,5 @@ class EnvelopeAddressFormatter extends AddressFormatter implements AddressFormat
         $options["formatType"] = 'envelope';
         return nl2br($formatter->getEnvelopeFormattedAddress($options));
     }
+
 }

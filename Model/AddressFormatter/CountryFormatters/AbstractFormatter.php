@@ -53,4 +53,5 @@ abstract class AbstractFormatter implements AddressFormatterInterface
         $countryNameFormatter = new CountryNameFormatter();
         return $countryNameFormatter->getFormattedCountryName($this->getAddress()->getCountry(), $options);
     }
+
 }

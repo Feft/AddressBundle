@@ -30,4 +30,5 @@ class AddressExtension extends \Twig_Extension
     {
         return 'feft_address_extension';
     }
+
 }

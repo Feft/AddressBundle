@@ -106,4 +106,5 @@ class PostalCode implements PostalCodeValidatorInterface
         $this->validator = $validator;
         return $this;
     }
+
 }

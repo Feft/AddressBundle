@@ -35,5 +35,4 @@ abstract class AbstractPostalCodeValidator implements PostalCodeValidatorInterfa
         return true;
     }
 
-
 }

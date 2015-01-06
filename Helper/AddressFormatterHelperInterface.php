@@ -19,4 +19,5 @@ interface AddressFormatterHelperInterface
      * @return string
      */
     public function getFormattedAddress(Address $address, array $options = array());
+    
 }

@@ -31,4 +31,5 @@ class FeftAddressExtension extends Extension
         # set parameter - use in services.xml
         $container->setParameter('feft_address', $config);
     }
+
 }

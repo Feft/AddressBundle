@@ -33,4 +33,5 @@ class InlineFormatter extends \Twig_Extension
     {
         return 'feft_inline_formatter';
     }
+
 }

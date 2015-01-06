@@ -27,4 +27,5 @@ class InlineAddressFormatter extends AddressFormatter implements AddressFormatte
         $options["formatType"] = 'inline';
         return $formatter->getInlineFormattedAddress($options);
     }
+
 }
