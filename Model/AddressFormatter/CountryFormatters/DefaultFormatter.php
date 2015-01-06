@@ -18,21 +18,22 @@ use Feft\AddressBundle\Model\AddressFormatter\AddressFormatterInterface;
  *
  * @package Feft\AddressBundle\Model\AddressFormatter\CountryFormatters
  */
-class DefaultFormatter extends AbstractFormatter implements AddressFormatterInterface {
+class DefaultFormatter extends AbstractFormatter implements AddressFormatterInterface
+{
     /**
      * The default layout of an address on the envelope
      *
      * @param array $options Array of options - how to format address.
      * @return string
      */
-    public function getEnvelopeFormattedAddress(array $options = array()) {
+    public function getEnvelopeFormattedAddress(array $options = array())
+    {
         return
-            $this->getAddress()->getStreet()->getName()." ".
+            $this->getAddress()->getStreet()->getName() . " " .
             $this->getAddress()->getNumber() . $this->config->getEndOfLine() .
-            $this->getAddress()->getPostalCode()->getCode()." ".
-            $this->getAddress()->getLocality()->getName().
-            $this->getCountryName($options)
-            ;
+            $this->getAddress()->getPostalCode()->getCode() . " " .
+            $this->getAddress()->getLocality()->getName() .
+            $this->getCountryName($options);
     }
 
     /**
@@ -41,12 +42,13 @@ class DefaultFormatter extends AbstractFormatter implements AddressFormatterInte
      * @param array $options Array of options - how to format address.
      * @return string
      */
-    public function getInlineFormattedAddress(array $options = array()) {
+    public function getInlineFormattedAddress(array $options = array())
+    {
         # adding line separator in $this->getCountryName method
-        return $this->getAddress()->getStreet()->getName()." ".
-            $this->getAddress()->getNumber(). $this->config->getInLineAddressSectionSeparator() .
-            $this->getAddress()->getPostalCode()->getCode()." ".
-            $this->getAddress()->getLocality()->getName().
-            $this->getCountryName($options);
+        return $this->getAddress()->getStreet()->getName() . " " .
+        $this->getAddress()->getNumber() . $this->config->getInLineAddressSectionSeparator() .
+        $this->getAddress()->getPostalCode()->getCode() . " " .
+        $this->getAddress()->getLocality()->getName() .
+        $this->getCountryName($options);
     }
 }

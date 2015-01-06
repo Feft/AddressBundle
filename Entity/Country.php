@@ -54,7 +54,7 @@ class Country
 
     /**
      * Province in the country.
-     * 
+     *
      * @ORM\OneToMany(targetEntity="Region", mappedBy="country")
      * @var ArrayCollection
      */
@@ -71,7 +71,7 @@ class Country
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -167,7 +167,7 @@ class Country
     /**
      * Get regions
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getRegions()
     {

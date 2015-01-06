@@ -9,7 +9,8 @@ use Feft\AddressBundle\Entity\PostalCode;
  * from country alpha2code string.
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-class Factory {
+class Factory
+{
     /**
      * Get specific validator.
      * Using __NAMESPACE__ constant.
@@ -20,9 +21,9 @@ class Factory {
      */
     public static function getInstance(PostalCode $postalCode, $countryAlpha2Code)
     {
-        $validatorName = __NAMESPACE__ . '\\' . $countryAlpha2Code."PostalCodeValidator";
+        $validatorName = __NAMESPACE__ . '\\' . $countryAlpha2Code . "PostalCodeValidator";
 
-        if(class_exists($validatorName)) {
+        if (class_exists($validatorName)) {
             return new $validatorName($postalCode);
         } else {
             return new NoValidator($postalCode);

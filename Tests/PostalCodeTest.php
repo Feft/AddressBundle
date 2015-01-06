@@ -6,14 +6,15 @@ namespace Feft\AddressBundle\Tests;
 use Feft\AddressBundle\Entity\PostalCode;
 use Feft\AddressBundle\Model\PostalValidator\Factory;
 
-class PostalCodeTest extends \PHPUnit_Framework_TestCase {
+class PostalCodeTest extends \PHPUnit_Framework_TestCase
+{
     private $code;
 
     public function setUp()
     {
         $this->code = new PostalCode();
         # create instance of validator for polish postal codes.
-        $this->code->setValidator(Factory::getInstance($this->code,"PL"));
+        $this->code->setValidator(Factory::getInstance($this->code, "PL"));
     }
 
     function testCreation()
@@ -53,13 +54,12 @@ class PostalCodeTest extends \PHPUnit_Framework_TestCase {
             $this->code = new PostalCode();
             # methods throws \Exception because no validator in the object
             $this->code->validate();
-        } catch( \Exception $e) {
-            $this->assertInstanceOf('\Exception', $e );
+        } catch (\Exception $e) {
+            $this->assertInstanceOf('\Exception', $e);
         }
 
 
     }
-
 
 
 }

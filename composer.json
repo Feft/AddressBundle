@@ -1,26 +1,31 @@
 {
-    "name": "feft/address-bundle",
-    "type": "symfony-bundle",
-    "description": "This is a Symfony2 bundle that lets using international mailing address.",
-    "keywords": ["address", "post", "postal", "validator"],
-    "homepage": "https://github.com/Feft/AddressBundle",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Piotr Pikuła",
-            "email": "piotrpikula@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.3",
-        "symfony/framework-bundle": "~2.1"
-    },
-    "suggest": {
-        "doctrine/doctrine-bundle": "~1.1",
-        "doctrine/orm": "~2.3"
-    },
-    "autoload": {
-        "psr-0": { "Feft\\AddressBundle": "" }
-    },
-    "target-dir": "Feft/AddressBundle"
+  "name": "feft/address-bundle",
+  "type": "symfony-bundle",
+  "description": "This is a Symfony2 bundle that lets using international mailing address.",
+  "keywords": [
+    "address",
+    "post",
+    "postal",
+    "validator"
+  ],
+  "homepage": "https://github.com/Feft/AddressBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Piotr Pikuła",
+      "email": "piotrpikula@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "symfony/framework-bundle": "~2.1"
+  },
+  "suggest": {
+    "doctrine/doctrine-bundle": "~1.1",
+    "doctrine/orm": "~2.3"
+  },
+  "autoload": {
+    "psr-0": {"Feft\\AddressBundle": ""}
+  },
+  "target-dir": "Feft/AddressBundle"
 }

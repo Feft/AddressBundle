@@ -7,16 +7,17 @@ use Feft\AddressBundle\Entity\Country;
 use Feft\AddressBundle\Entity\Locality;
 use Feft\AddressBundle\Entity\Region;
 
-class RegionTest extends \PHPUnit_Framework_TestCase {
+class RegionTest extends \PHPUnit_Framework_TestCase
+{
     public function testSettersAndGetters()
     {
         $region = new Region();
         $region->setName("śląskie");
-        $this->assertSame("śląskie",$region->getName());
+        $this->assertSame("śląskie", $region->getName());
 
-        $country = new Country("France","FR");
+        $country = new Country("France", "FR");
         $region->setCountry($country);
-        $this->assertSame($country,$region->getCountry());
+        $this->assertSame($country, $region->getCountry());
 
         $locality = new Locality();
         $locality->setName("Paris");
@@ -60,7 +61,7 @@ class RegionTest extends \PHPUnit_Framework_TestCase {
             $region->setName($r);
 
             #separate object for removeElement test
-            if($r == "wielkopolskie") {
+            if ($r == "wielkopolskie") {
                 $region2 = new Region();
                 $region2->setName($r);
                 $country->addRegion($region2);
@@ -70,14 +71,14 @@ class RegionTest extends \PHPUnit_Framework_TestCase {
 
 
         }
-        $this->assertCount(16,$country->getRegions());
+        $this->assertCount(16, $country->getRegions());
 
-        $i=0;
+        $i = 0;
         foreach ($country->getRegions() as $r) {
-            $this->assertSame($regions[$i++],$r->getName());
+            $this->assertSame($regions[$i++], $r->getName());
         }
 
         $country->getRegions()->removeElement($region2);
-        $this->assertCount(15,$country->getRegions());
+        $this->assertCount(15, $country->getRegions());
     }
 }

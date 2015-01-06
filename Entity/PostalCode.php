@@ -39,11 +39,10 @@ class PostalCode implements PostalCodeValidatorInterface
     private $validator;
 
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -66,7 +65,7 @@ class PostalCode implements PostalCodeValidatorInterface
     /**
      * Get code
      *
-     * @return string 
+     * @return string
      */
     public function getCode()
     {
@@ -81,7 +80,7 @@ class PostalCode implements PostalCodeValidatorInterface
      */
     public function validate()
     {
-        if(!is_object($this->getValidator())) {
+        if (!is_object($this->getValidator())) {
             throw new \Exception("Missing validation method.");
         }
         return $this->getValidator()->validate();

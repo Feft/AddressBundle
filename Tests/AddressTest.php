@@ -10,12 +10,13 @@ use Feft\AddressBundle\Entity\Locality;
 use Feft\AddressBundle\Entity\Region;
 use Feft\AddressBundle\Entity\PostalCode;
 
-class AddressTest extends \PHPUnit_Framework_TestCase {
+class AddressTest extends \PHPUnit_Framework_TestCase
+{
 
     public function testFullObjectDemo()
     {
         $address = new Address();
-        $country = new Country("Poland","PL");
+        $country = new Country("Poland", "PL");
 
         $address->setCountry($country);
 
@@ -48,7 +49,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase {
     {
         $obj = new Address();
         $obj->setCountry(new Country());
-        $this->assertInstanceOf("Feft\AddressBundle\Entity\Country",$obj->getCountry());
+        $this->assertInstanceOf("Feft\AddressBundle\Entity\Country", $obj->getCountry());
     }
 
     public function testCreation()
@@ -62,7 +63,7 @@ class AddressTest extends \PHPUnit_Framework_TestCase {
         $code = new PostalCode();
         $obj->setPostalCode($code);
         $code->setCode("abcde");
-        $this->assertEquals($code->getCode(),$obj->getPostalCode()->getCode());
+        $this->assertEquals($code->getCode(), $obj->getPostalCode()->getCode());
     }
 }
  

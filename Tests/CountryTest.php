@@ -18,7 +18,7 @@ class CountryTest extends \PHPUnit_Framework_TestCase
         $country->setLocalShortName("Polska");
         $this->assertSame('Polska', $country->getLocalShortName());
 
-        $this->assertEquals("Poland",$country->getName());
+        $this->assertEquals("Poland", $country->getName());
 
         $country->setCode("US");
         $this->assertEquals("US", $country->getCode());

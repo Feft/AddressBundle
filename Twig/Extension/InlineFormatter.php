@@ -10,7 +10,8 @@ use Feft\AddressBundle\Helper\InlineAddressFormatter;
  *
  * @package Feft\AddressBundle\Twig\Extension
  */
-class InlineFormatter extends \Twig_Extension {
+class InlineFormatter extends \Twig_Extension
+{
 
     /**
      * Inline format address  - delegation to AddressFormatter class.
@@ -22,7 +23,7 @@ class InlineFormatter extends \Twig_Extension {
     public function inlineFormatter(Address $address, array $options = array())
     {
         $formatter = new InlineAddressFormatter();
-        return $formatter->getFormattedAddress($address,$options);
+        return $formatter->getFormattedAddress($address, $options);
     }
 
     /**

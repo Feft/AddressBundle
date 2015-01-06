@@ -8,7 +8,8 @@ namespace Feft\AddressBundle\Model\AddressFormatter;
  *
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
-class EndOfLineCreator {
+class EndOfLineCreator
+{
     /**
      * Generating end of line symbol using Config class
      * and formatType option.
@@ -21,14 +22,14 @@ class EndOfLineCreator {
     public function generateEndOfLineString(array $options, Config $config)
     {
         # if no key in array
-        if(false === array_key_exists('formatType',$options)) {
+        if (false === array_key_exists('formatType', $options)) {
             return "";
         }
         # If format type is for envelope return line ending symbol (eg. \r\n)
         # No line ending if inline format type.
-        if($options["formatType"] === "envelope") {
+        if ($options["formatType"] === "envelope") {
             return $config->getEndOfLine();
-        } elseif($options["formatType"] === "inline") {
+        } elseif ($options["formatType"] === "inline") {
             return $config->getInLineAddressSectionSeparator();
         }
         return "";

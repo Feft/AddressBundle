@@ -7,7 +7,8 @@ namespace Feft\AddressBundle\Twig\Extension;
  * Class AddressExtension
  * @package Feft\AddressBundle\Twig\Extension
  */
-class AddressExtension extends \Twig_Extension {
+class AddressExtension extends \Twig_Extension
+{
 
     /**
      * Registration formatting functions.

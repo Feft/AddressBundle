@@ -43,7 +43,7 @@ class Locality
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -66,7 +66,7 @@ class Locality
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {

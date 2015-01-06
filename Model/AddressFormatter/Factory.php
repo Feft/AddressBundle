@@ -11,7 +11,8 @@ use Feft\AddressBundle\Model\AddressFormatter\CountryFormatters\DefaultFormatter
  *
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
-class Factory {
+class Factory
+{
     /**
      * Factory - create concrete formatter object
      * from country alpha2code string.
@@ -21,22 +22,19 @@ class Factory {
      */
     public function getInstance(Address $address)
     {
-        /**
-         * @todo - error if no country in address object
-         */
         $country = $address->getCountry();
 
         # get country code
-        if(is_object($country)) {
+        if (is_object($country)) {
             $countryAlpha2Code = $country->getCode();
         } else {
             $countryAlpha2Code = '';
         }
 
-        $formatterName = __NAMESPACE__ . '\\CountryFormatters\\' . $countryAlpha2Code ;
+        $formatterName = __NAMESPACE__ . '\\CountryFormatters\\' . $countryAlpha2Code;
 
         # if file exists in CountryFormatters folder
-        if(class_exists($formatterName)) {
+        if (class_exists($formatterName)) {
             return new $formatterName($address);
         } else {
             return new DefaultFormatter($address);

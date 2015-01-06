@@ -5,13 +5,15 @@ namespace Feft\AddressBundle\Tests;
 use Feft\AddressBundle\Entity\PostalCode;
 use Feft\AddressBundle\Model\PostalValidator\Factory;
 
-class PLPostalCodeValidatorTest extends \PHPUnit_Framework_TestCase {
+class PLPostalCodeValidatorTest extends \PHPUnit_Framework_TestCase
+{
     private $code;
     private $validator;
+
     public function setUp()
     {
         $this->code = new PostalCode();
-        $this->validator = Factory::getInstance($this->code,"PL");
+        $this->validator = Factory::getInstance($this->code, "PL");
     }
 
     public function testCodeCreation()

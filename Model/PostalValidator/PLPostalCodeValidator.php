@@ -9,7 +9,8 @@ use Feft\AddressBundle\Entity\PostalCode;
  *
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-class PLPostalCodeValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface  {
+class PLPostalCodeValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface
+{
 
     /**
      * Run parent constructor - set postalCode attribute.
@@ -30,12 +31,12 @@ class PLPostalCodeValidator extends AbstractPostalCodeValidator implements Posta
     public function validate()
     {
         # check length - 6 digits
-        if(strlen($this->postalCode->getCode()) !== 6) {
+        if (strlen($this->postalCode->getCode()) !== 6) {
             return false;
         }
 
         # check format: dwo digits, dash, three digits
-        if(preg_match('/^\d{2}[-]\d{3}$/',$this->postalCode->getCode()))  {
+        if (preg_match('/^\d{2}[-]\d{3}$/', $this->postalCode->getCode())) {
             return true;
         }
         return false;

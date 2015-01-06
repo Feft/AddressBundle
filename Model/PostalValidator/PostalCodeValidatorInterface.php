@@ -3,16 +3,17 @@
 
 namespace Feft\AddressBundle\Model\PostalValidator;
 
+/**
+ * Interface PostalCodeValidatorInterface
+ *
+ * @package Feft\AddressBundle\Model
+ */
+interface PostalCodeValidatorInterface
+{
     /**
-     * Interface PostalCodeValidatorInterface
+     * Validate postal code.
      *
-     * @package Feft\AddressBundle\Model
+     * @return bool
      */
-    interface PostalCodeValidatorInterface {
-        /**
-         * Validate postal code.
-         *
-         * @return bool
-         */
-        public function validate();
-    }
+    public function validate();
+}

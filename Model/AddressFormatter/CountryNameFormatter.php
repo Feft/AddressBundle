@@ -11,7 +11,8 @@ use Feft\AddressBundle\Entity\Country;
  *
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
-class CountryNameFormatter {
+class CountryNameFormatter
+{
 
     public function __construct()
     {
@@ -27,11 +28,11 @@ class CountryNameFormatter {
     public function getFormattedCountryName(Country $country, array $options = array())
     {
         # if no key in array
-        if(false === array_key_exists('showCountryName',$options)) {
+        if (false === array_key_exists('showCountryName', $options)) {
             return "";
         }
         # if the country name should be show
-        if(true === $options["showCountryName"]) {
+        if (true === $options["showCountryName"]) {
             $lineEndCreator = new EndOfLineCreator();
             return $lineEndCreator->generateEndOfLineString($options, new Config()) .
             $country->getName();

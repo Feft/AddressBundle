@@ -11,7 +11,8 @@ use Feft\AddressBundle\Model\AddressFormatter\Factory;
  *
  * @package Feft\AddressBundle\Helper
  */
-abstract class AddressFormatter implements AddressFormatterHelperInterface {
+abstract class AddressFormatter implements AddressFormatterHelperInterface
+{
 
     /**
      * Address formatter factory.

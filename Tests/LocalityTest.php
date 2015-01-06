@@ -7,7 +7,8 @@ use Feft\AddressBundle\Entity\Locality;
 use Feft\AddressBundle\Entity\PostalCode;
 use Feft\AddressBundle\Entity\Region;
 
-class PlaceTest extends \PHPUnit_Framework_TestCase {
+class PlaceTest extends \PHPUnit_Framework_TestCase
+{
     public function testName()
     {
         $place = new Locality();

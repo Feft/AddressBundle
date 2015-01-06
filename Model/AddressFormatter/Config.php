@@ -7,7 +7,8 @@ namespace Feft\AddressBundle\Model\AddressFormatter;
  *
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
-class Config {
+class Config
+{
     /**
      * End of line symbol for this platform.
      * @var string

@@ -7,15 +7,17 @@ use Feft\AddressBundle\Entity\Region;
 use Feft\AddressBundle\Entity\Street;
 use Feft\AddressBundle\Model\PostalValidator\Factory;
 
-class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
+class DefaultFormatterTest extends PHPUnit_Framework_TestCase
+{
     private $address;
     private $factory;
     private $formatter;
 
-    function setUp() {
+    function setUp()
+    {
         $this->address = new \Feft\AddressBundle\Entity\Address();
 
-        $country = new Country("Poland","PL");
+        $country = new Country("Poland", "PL");
         $country->setLocalShortName("Polska");
 
         $locality = new Locality();
@@ -32,7 +34,7 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
 
         $code = new PostalCode();
         $code->setCode("43-100");
-        $code->setValidator(Factory::getInstance($code,$country->getCode()));
+        $code->setValidator(Factory::getInstance($code, $country->getCode()));
 
         $this->address->setCountry($country);
         $this->address->setRegion($region);
@@ -59,7 +61,7 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
     {
         $string = $this->formatter->getInlineFormattedAddress(array());
 
-        $this->assertNotContains(PHP_EOL,$string);
+        $this->assertNotContains(PHP_EOL, $string);
     }
 
     public function testGetInlineFormattedAddressWithCountryName()
@@ -70,7 +72,7 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
 
         $config = new \Feft\AddressBundle\Model\AddressFormatter\Config();
 
-        $this->assertContains($config->getInLineAddressSectionSeparator()."Poland",$string);
+        $this->assertContains($config->getInLineAddressSectionSeparator() . "Poland", $string);
     }
 
 
@@ -78,12 +80,12 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase {
     {
         $string = $this->formatter->getEnvelopeFormattedAddress(array());
 
-        $this->assertContains(PHP_EOL,$string);
+        $this->assertContains(PHP_EOL, $string);
 
-        $this->assertStringStartsWith("Wolności",$string);
-        $this->assertContains("20 m. 21",$string);
+        $this->assertStringStartsWith("Wolności", $string);
+        $this->assertContains("20 m. 21", $string);
         # no option so no country name
-        $this->assertNotContains("Poland",$string);
+        $this->assertNotContains("Poland", $string);
     }
 
 

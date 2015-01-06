@@ -12,13 +12,15 @@ use Feft\AddressBundle\Helper\InlineAddressFormatter;
 use Feft\AddressBundle\Model\AddressFormatter\Config;
 use Feft\AddressBundle\Model\PostalValidator\Factory;
 
-class InlineAddressFormatterTest extends \PHPUnit_Framework_TestCase {
+class InlineAddressFormatterTest extends \PHPUnit_Framework_TestCase
+{
     private $address;
 
-    function setUp() {
+    function setUp()
+    {
         $this->address = new Address();
 
-        $country = new Country("Poland","PL");
+        $country = new Country("Poland", "PL");
         $country->setLocalShortName("Polska");
 
         $locality = new Locality();
@@ -35,7 +37,7 @@ class InlineAddressFormatterTest extends \PHPUnit_Framework_TestCase {
 
         $code = new PostalCode();
         $code->setCode("43-100");
-        $code->setValidator(Factory::getInstance($code,$country->getCode()));
+        $code->setValidator(Factory::getInstance($code, $country->getCode()));
 
         $this->address->setCountry($country);
         $this->address->setRegion($region);
@@ -48,9 +50,9 @@ class InlineAddressFormatterTest extends \PHPUnit_Framework_TestCase {
     public function testGetFormattedAddress()
     {
         $helper = new InlineAddressFormatter();
-        $string = $helper->getFormattedAddress($this->address,array());
+        $string = $helper->getFormattedAddress($this->address, array());
         $config = new Config();
         #
-        $this->assertContains($config->getInLineAddressSectionSeparator(),$string);
+        $this->assertContains($config->getInLineAddressSectionSeparator(), $string);
     }
 }

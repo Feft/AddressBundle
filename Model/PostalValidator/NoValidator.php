@@ -11,7 +11,8 @@ use Feft\AddressBundle\Entity\PostalCode;
  *
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-class NoValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface {
+class NoValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface
+{
     function __construct(PostalCode $postalCode)
     {
         parent::__construct($postalCode);

@@ -11,7 +11,8 @@ use Feft\AddressBundle\Helper\EnvelopeAddressFormatter;
  *
  * @package Feft\AddressBundle\Twig\Extension
  */
-class EnvelopeFormatter extends \Twig_Extension {
+class EnvelopeFormatter extends \Twig_Extension
+{
     /**
      * Format address on envelope - delegation to AddressFormatter class.
      *
@@ -22,7 +23,7 @@ class EnvelopeFormatter extends \Twig_Extension {
     public function envelopeFormatter(Address $address, array $options = array())
     {
         $formatter = new EnvelopeAddressFormatter();
-        return $formatter->getFormattedAddress($address,$options);
+        return $formatter->getFormattedAddress($address, $options);
     }
 
     /**

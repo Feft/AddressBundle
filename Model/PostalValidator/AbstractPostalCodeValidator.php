@@ -9,7 +9,8 @@ use Feft\AddressBundle\Entity\PostalCode;
  *
  * @package Feft\AddressBundle\Model\PostalValidator
  */
-abstract class AbstractPostalCodeValidator implements PostalCodeValidatorInterface  {
+abstract class AbstractPostalCodeValidator implements PostalCodeValidatorInterface
+{
 
     /**
      * Postal code to validate.
@@ -30,7 +31,7 @@ abstract class AbstractPostalCodeValidator implements PostalCodeValidatorInterfa
      */
     public function validate()
     {
-//        echo "nothing to do, but you have to create validator class for your country\r\n";
+        # nothing to do, but you have to create validator class for your country
         return true;
     }
 

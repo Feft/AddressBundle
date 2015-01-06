@@ -11,7 +11,8 @@ use Feft\AddressBundle\Model\AddressFormatter\AddressFormatterInterface;
  *
  * @package Feft\AddressBundle\Model\AddressFormatter\CountryFormatters
  */
-abstract class AbstractFormatter implements AddressFormatterInterface {
+abstract class AbstractFormatter implements AddressFormatterInterface
+{
     /**
      * Address to format.
      * @var Address
@@ -24,7 +25,8 @@ abstract class AbstractFormatter implements AddressFormatterInterface {
      */
     protected $config;
 
-    function __construct(Address $address) {
+    function __construct(Address $address)
+    {
         $this->address = $address;
 
         # formatter configuration

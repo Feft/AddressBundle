@@ -11,13 +11,15 @@ use Feft\AddressBundle\Entity\Street;
 use Feft\AddressBundle\Helper\EnvelopeAddressFormatter;
 use Feft\AddressBundle\Model\PostalValidator\Factory;
 
-class EnvelopeAddressFormatterTest extends \PHPUnit_Framework_TestCase {
+class EnvelopeAddressFormatterTest extends \PHPUnit_Framework_TestCase
+{
     private $address;
 
-    function setUp() {
+    function setUp()
+    {
         $this->address = new Address();
 
-        $country = new Country("Poland","PL");
+        $country = new Country("Poland", "PL");
         $country->setLocalShortName("Polska");
 
         $locality = new Locality();
@@ -34,7 +36,7 @@ class EnvelopeAddressFormatterTest extends \PHPUnit_Framework_TestCase {
 
         $code = new PostalCode();
         $code->setCode("43-100");
-        $code->setValidator(Factory::getInstance($code,$country->getCode()));
+        $code->setValidator(Factory::getInstance($code, $country->getCode()));
 
         $this->address->setCountry($country);
         $this->address->setRegion($region);
@@ -47,8 +49,8 @@ class EnvelopeAddressFormatterTest extends \PHPUnit_Framework_TestCase {
     public function testGetFormattedAddress()
     {
         $helper = new EnvelopeAddressFormatter();
-        $string = $helper->getFormattedAddress($this->address,array());
+        $string = $helper->getFormattedAddress($this->address, array());
         # method use nl2br function
-        $this->assertContains("<br />",$string);
+        $this->assertContains("<br />", $string);
     }
 }

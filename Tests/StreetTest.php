@@ -5,7 +5,8 @@ namespace Feft\AddressBundle\Tests;
 
 use Feft\AddressBundle\Entity\Street;
 
-class StreetTest extends \PHPUnit_Framework_TestCase {
+class StreetTest extends \PHPUnit_Framework_TestCase
+{
     public function testCreation()
     {
         $this->assertInstanceOf("Feft\AddressBundle\Entity\Street", new Street());
@@ -16,7 +17,7 @@ class StreetTest extends \PHPUnit_Framework_TestCase {
         $street = new Street();
         $name = "Myśliwska";
         $street->setName($name);
-        $this->assertSame($name,$street->getName());
+        $this->assertSame($name, $street->getName());
         $this->assertNull($street->getId());
     }
 }
