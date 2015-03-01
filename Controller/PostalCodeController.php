@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\PostalCode;
-use Feft\AddressBundle\Form\PostalCodeType;
+use Feft\AddressBundle\Form\Type\PostalCodeType;
 
 /**
  * PostalCode controller.

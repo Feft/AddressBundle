@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\Address;
-use Feft\AddressBundle\Form\AddressType;
+use Feft\AddressBundle\Form\Type\AddressType;
 
 /**
  * Address controller.

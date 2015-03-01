@@ -1,12 +1,12 @@
 <?php
 
-namespace Feft\AddressBundle\Form;
+namespace Feft\AddressBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class PostalCodeType extends AbstractType
+class StreetType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,7 +15,7 @@ class PostalCodeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('code')
+            ->add('name')
         ;
     }
     
@@ -25,7 +25,7 @@ class PostalCodeType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Feft\AddressBundle\Entity\PostalCode'
+            'data_class' => 'Feft\AddressBundle\Entity\Street'
         ));
     }
 
@@ -34,6 +34,6 @@ class PostalCodeType extends AbstractType
      */
     public function getName()
     {
-        return 'feft_addressbundle_postalcode';
+        return 'feft_addressbundle_street';
     }
 }

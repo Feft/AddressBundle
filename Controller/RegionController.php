@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\Region;
-use Feft\AddressBundle\Form\RegionType;
+use Feft\AddressBundle\Form\Type\RegionType;
 
 /**
  * Region controller.

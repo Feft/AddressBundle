@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\Street;
-use Feft\AddressBundle\Form\StreetType;
+use Feft\AddressBundle\Form\Type\StreetType;
 
 /**
  * Street controller.

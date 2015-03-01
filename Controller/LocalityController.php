@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\Locality;
-use Feft\AddressBundle\Form\LocalityType;
+use Feft\AddressBundle\Form\Type\LocalityType;
 
 /**
  * Locality controller.

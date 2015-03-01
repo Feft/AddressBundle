@@ -1,12 +1,12 @@
 <?php
 
-namespace Feft\AddressBundle\Form;
+namespace Feft\AddressBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class CountryType extends AbstractType
+class RegionType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -16,8 +16,7 @@ class CountryType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('localShortName')
-            ->add('code')
+            ->add('country')
         ;
     }
     
@@ -27,7 +26,7 @@ class CountryType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Feft\AddressBundle\Entity\Country'
+            'data_class' => 'Feft\AddressBundle\Entity\Region'
         ));
     }
 
@@ -36,6 +35,6 @@ class CountryType extends AbstractType
      */
     public function getName()
     {
-        return 'feft_addressbundle_country';
+        return 'feft_addressbundle_region';
     }
 }
