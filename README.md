@@ -41,8 +41,11 @@ public function registerBundles()
 Update doctrine schema
 ----------------------
 ```sh
-$ php app/console doctrine:schema:update --dump-sql
+$ php app/console doctrine:schema:update --force
 ```
+CRUD operations
+---------------
+Every entity has CRUD Controller to show/add/edit/delete operation, eg. to manage countries use link like this: http://localhost/address/web/app.php/country/
 Usage
 -----
 Controller file:  
