@@ -27,7 +27,7 @@ class PostalCode implements PostalCodeValidatorInterface
      *
      * @var string
      *
-     * @ORM\Column(name="code", type="string", length=6)
+     * @ORM\Column(name="code", type="string", length=10)
      */
     private $code;
 
@@ -105,6 +105,16 @@ class PostalCode implements PostalCodeValidatorInterface
     {
         $this->validator = $validator;
         return $this;
+    }
+
+    /**
+     * Default implementation.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getCode();
     }
 
 }

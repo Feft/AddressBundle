@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Address list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Country</th>
+                <th>Region</th>
+                <th>Postal Code</th>
+                <th>Locality</th>
+                <th>Street</th>
+                <th>Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('address_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.country.name }}</td>
+                <td>{{ entity.region.name }}</td>
+                <td>{{ entity.postalcode.code }}</td>
+                <td>{{ entity.locality.name }}</td>
+                <td>{{ entity.street.name }}</td>
+                <td>{{ entity.number }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('address_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('address_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('address_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

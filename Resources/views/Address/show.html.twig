@@ -1,0 +1,56 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Address</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ entity.country.name }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ entity.region.name }}</td>
+            </tr>
+            <tr>
+                <th>Postal code</th>
+                <td>{{ entity.postalCode.code }}</td>
+            </tr>
+            <tr>
+                <th>Locality</th>
+                <td>{{ entity.locality.name }}</td>
+            </tr>
+            <tr>
+                <th>Street</th>
+                <td>{{ entity.street.name }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ entity.region.name }}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{ entity.number }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('address') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('address_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

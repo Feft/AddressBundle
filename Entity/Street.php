@@ -62,4 +62,15 @@ class Street
     {
         return $this->name;
     }
+
+
+    /**
+     * Default implementation.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

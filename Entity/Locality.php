@@ -95,4 +95,15 @@ class Locality
     {
         return $this->region;
     }
+
+
+    /**
+     * Default implementation.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }
