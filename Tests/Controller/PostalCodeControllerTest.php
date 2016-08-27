@@ -6,7 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class PostalCodeControllerTest extends WebTestCase
 {
-    /*
+    /**
+     * @group ExcludedGroup
+     */
     public function testCompleteScenario()
     {
         // Create a new client to browse the application
@@ -51,5 +53,4 @@ class PostalCodeControllerTest extends WebTestCase
         $this->assertNotRegExp('/Foo/', $client->getResponse()->getContent());
     }
 
-    */
 }
