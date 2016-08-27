@@ -25,7 +25,7 @@ abstract class AbstractFormatter implements AddressFormatterInterface
      */
     protected $config;
 
-    function __construct(Address $address)
+    public function __construct(Address $address)
     {
         $this->address = $address;
 

@@ -13,7 +13,7 @@ use Feft\AddressBundle\Entity\PostalCode;
  */
 class NoValidator extends AbstractPostalCodeValidator implements PostalCodeValidatorInterface
 {
-    function __construct(PostalCode $postalCode)
+    public function __construct(PostalCode $postalCode)
     {
         parent::__construct($postalCode);
     }

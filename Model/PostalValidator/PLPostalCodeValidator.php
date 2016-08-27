@@ -17,7 +17,7 @@ class PLPostalCodeValidator extends AbstractPostalCodeValidator implements Posta
      *
      * @param PostalCode $postalCode
      */
-    function __construct(PostalCode $postalCode)
+    public function __construct(PostalCode $postalCode)
     {
         parent::__construct($postalCode);
     }

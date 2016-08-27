@@ -20,7 +20,7 @@ abstract class AddressFormatter implements AddressFormatterHelperInterface
      */
     protected $factory;
 
-    function __construct()
+    public function __construct()
     {
         $this->factory = new Factory();
     }

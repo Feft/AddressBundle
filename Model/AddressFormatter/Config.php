@@ -26,7 +26,7 @@ class Config
     /**
      * Default class constructor.
      */
-    function __construct()
+    public function __construct()
     {
         $this->endOfLine = PHP_EOL;
         $this->inLineAddressSectionSeparator = ", ";
