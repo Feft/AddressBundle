@@ -1,0 +1,47 @@
+Feft\AddressBundle\Entity\Country:
+    type: entity
+    table: country
+    id:
+        id:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            scale: 0
+            length: 40
+            unique: false
+            nullable: false
+            precision: 0
+        localShortName:
+            type: string
+            scale: 0
+            length: 40
+            unique: false
+            nullable: true
+            precision: 0
+            column: local_short_name
+        code:
+            type: string
+            scale: 0
+            length: 2
+            unique: false
+            nullable: true
+            precision: 0
+            column: alpha_2_code
+    oneToMany:
+        regions:
+            targetEntity: Feft\AddressBundle\Entity\Region
+            cascade: {  }
+            mappedBy: country
+            inversedBy: null
+            orphanRemoval: false
+            orderBy: null
+    lifecycleCallbacks: {  }

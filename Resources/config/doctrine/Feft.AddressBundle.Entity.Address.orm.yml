@@ -1,0 +1,70 @@
+Feft\AddressBundle\Entity\Address:
+    type: entity
+    table: address
+    repositoryClass: Feft\AddressBundle\Repository\AddressRepository
+    id:
+        id:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        number:
+            type: string
+            scale: 0
+            length: 30
+            unique: false
+            nullable: true
+            precision: 0
+    manyToOne:
+        country:
+            targetEntity: Feft\AddressBundle\Entity\Country
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                country_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        region:
+            targetEntity: Feft\AddressBundle\Entity\Region
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                region_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        locality:
+            targetEntity: Feft\AddressBundle\Entity\Locality
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                place_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        postalCode:
+            targetEntity: Feft\AddressBundle\Entity\PostalCode
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                postal_code_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        street:
+            targetEntity: Feft\AddressBundle\Entity\Street
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                street_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

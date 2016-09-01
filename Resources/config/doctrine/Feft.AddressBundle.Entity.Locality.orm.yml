@@ -1,0 +1,33 @@
+Feft\AddressBundle\Entity\Locality:
+    type: entity
+    table: locality
+    id:
+        id:
+            type: integer
+            scale: 0
+            length: null
+            unique: false
+            nullable: false
+            precision: 0
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            scale: 0
+            length: 100
+            unique: false
+            nullable: false
+            precision: 0
+    manyToOne:
+        region:
+            targetEntity: Feft\AddressBundle\Entity\Region
+            cascade: {  }
+            mappedBy: null
+            inversedBy: localities
+            joinColumns:
+                region_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
