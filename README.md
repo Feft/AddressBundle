@@ -3,7 +3,7 @@
 Address
 =======
 
-International mailing address created in Symfony2.
+International mailing address created in Symfony2. Format examples on [http://www.bitboost.com/ref/international-address-formats.html#Formats][3]
 
 Installation
 ------------
@@ -112,3 +112,4 @@ The bundle was created by Piotr Pikuła. See the list of [contributors][2].
 
 [1]: http://getcomposer.org/
 [2]: https://github.com/Feft/AddressBundle/graphs/contributors
+[3]: http://www.bitboost.com/ref/international-address-formats.html#Formats
