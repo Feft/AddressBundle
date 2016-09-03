@@ -44,7 +44,7 @@ class DefaultFormatterTest extends PHPUnit_Framework_TestCase
         $this->address->setPostalCode($code);
 
 
-        $this->factory = new \Feft\AddressBundle\Model\AddressFormatter\Factory();
+        $this->factory = new \Feft\AddressBundle\Model\AddressFormatter\FormatterFactory();
 
         $this->formatter = $this->factory->getInstance($this->address);
     }

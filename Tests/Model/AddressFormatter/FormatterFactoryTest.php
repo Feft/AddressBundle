@@ -1,6 +1,6 @@
 <?php
 
-class FactoryTest extends PHPUnit_Framework_TestCase
+class FormatterFactoryTest extends PHPUnit_Framework_TestCase
 {
 
     private $address;
@@ -9,7 +9,7 @@ class FactoryTest extends PHPUnit_Framework_TestCase
     function setUp()
     {
         $this->address = new \Feft\AddressBundle\Entity\Address();
-        $this->factory = new \Feft\AddressBundle\Model\AddressFormatter\Factory();
+        $this->factory = new \Feft\AddressBundle\Model\AddressFormatter\FormatterFactory();
     }
 
     public function testNoCountryInAddress()

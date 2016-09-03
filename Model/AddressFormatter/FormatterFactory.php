@@ -11,7 +11,7 @@ use Feft\AddressBundle\Model\AddressFormatter\CountryFormatters\DefaultFormatter
  *
  * @package Feft\AddressBundle\Model\AddressFormatter
  */
-class Factory
+class FormatterFactory
 {
     /**
      * Factory - create concrete formatter object

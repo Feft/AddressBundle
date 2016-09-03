@@ -3,7 +3,7 @@
 namespace Feft\AddressBundle\Helper;
 
 use Feft\AddressBundle\Entity\Address;
-use Feft\AddressBundle\Model\AddressFormatter\Factory;
+use Feft\AddressBundle\Model\AddressFormatter\FormatterFactory;
 
 /**
  * Class AddressFormatter
@@ -16,13 +16,13 @@ abstract class AddressFormatter implements AddressFormatterHelperInterface
 
     /**
      * Address formatter factory.
-     * @var Factory
+     * @var FormatterFactory
      */
     protected $factory;
 
     public function __construct()
     {
-        $this->factory = new Factory();
+        $this->factory = new FormatterFactory();
     }
 
     /**
