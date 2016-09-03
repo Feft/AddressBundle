@@ -2,13 +2,6 @@
 
 namespace Feft\AddressBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Feft\AddressBundle\Entity\Country;
-use Feft\AddressBundle\Entity\Locality;
-use Feft\AddressBundle\Entity\PostalCode;
-use Feft\AddressBundle\Entity\Region;
-use Feft\AddressBundle\Entity\Street;
-
 /**
  * Address in international formats.
  *
@@ -29,7 +22,7 @@ class Address
      * Country
      *
      * @var Country
-     **/
+     */
     protected $country;
 
 

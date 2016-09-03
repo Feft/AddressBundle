@@ -2,9 +2,6 @@
 
 namespace Feft\AddressBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Feft\AddressBundle\Entity\Region;
-
 /**
  * Locality
  */

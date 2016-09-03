@@ -2,7 +2,6 @@
 
 namespace Feft\AddressBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
 use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidatorInterface;
 
 /**
