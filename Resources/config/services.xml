@@ -15,13 +15,9 @@
     -->
 
     <parameters>
-        <parameter key="feft_address.twig.address_extension.class">Feft\AddressBundle\Twig\Extension\AddressExtension
-        </parameter>
-        <parameter key="feft_address.twig.envelope_formatter.class">
-            Feft\AddressBundle\Twig\Extension\EnvelopeFormatter
-        </parameter>
-        <parameter key="feft_address.twig.inline_formatter.class">Feft\AddressBundle\Twig\Extension\InlineFormatter
-        </parameter>
+        <parameter key="feft_address.twig.address_extension.class">Feft\AddressBundle\Twig\Extension\AddressExtension</parameter>
+        <parameter key="feft_address.twig.envelope_formatter.class">Feft\AddressBundle\Twig\Extension\EnvelopeFormatter</parameter>
+        <parameter key="feft_address.twig.inline_formatter.class">Feft\AddressBundle\Twig\Extension\InlineFormatter</parameter>
     </parameters>
 
     <services>
