@@ -7,33 +7,22 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Region
- *
- * @ORM\Table(name="region")
- * @ORM\Entity
  */
 class Region
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * Region name
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
 
     /**
      * Region country.
-     * @ORM\ManyToOne(targetEntity="Country", inversedBy="regions")
-     * @ORM\JoinColumn(name="country_id", referencedColumnName="id")
      * @var Country;
      */
     protected $country;
@@ -41,8 +30,6 @@ class Region
 
     /**
      * Region localities.
-     *
-     * @ORM\OneToMany(targetEntity="Locality", mappedBy="region")
      * @var Locality
      */
     protected $localities;

@@ -6,26 +6,17 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Street
- *
- * @ORM\Table(name="street")
- * @ORM\Entity
  */
 class Street
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * Street name
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=150)
      */
     private $name;
 

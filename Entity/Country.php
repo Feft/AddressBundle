@@ -13,18 +13,11 @@ use Feft\AddressBundle\Entity\Region;
  *
  * @link http://www.iso.org/iso/country_codes.htm
  * @link http://en.wikipedia.org/wiki/ISO_3166
- *
- * @ORM\Table(name="country")
- * @ORM\Entity
  */
 class Country
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
     /**
@@ -32,30 +25,23 @@ class Country
      * eg. Poland.
      *
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=40)
      */
     private $name;
     /**
      * Local short name eg. "Polska" or "United States (the)"
      *
      * @var string
-     * @ORM\Column(name="local_short_name", type="string", length=40, nullable=true)
      */
     private $localShortName;
     /**
      * Alpha-2 code country
      * @link http://www.iso.org/iso/country_codes.htm
      * @var string
-     *
-     * @ORM\Column(name="alpha_2_code", type="string", length=2, nullable=true)
      */
     private $code;
 
     /**
      * Province in the country.
-     *
-     * @ORM\OneToMany(targetEntity="Region", mappedBy="country")
      * @var ArrayCollection
      */
     protected $regions;

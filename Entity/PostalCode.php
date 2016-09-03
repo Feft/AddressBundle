@@ -7,18 +7,11 @@ use Feft\AddressBundle\Model\PostalValidator\PostalCodeValidatorInterface;
 
 /**
  * PostalCode
- *
- * @ORM\Table(name="postal_code")
- * @ORM\Entity
  */
 class PostalCode implements PostalCodeValidatorInterface
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
@@ -26,8 +19,6 @@ class PostalCode implements PostalCodeValidatorInterface
      * Postal code.
      *
      * @var string
-     *
-     * @ORM\Column(name="code", type="string", length=10)
      */
     private $code;
 

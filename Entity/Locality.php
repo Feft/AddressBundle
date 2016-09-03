@@ -7,34 +7,22 @@ use Feft\AddressBundle\Entity\Region;
 
 /**
  * Locality
- *
- * @ORM\Table(name="locality")
- * @ORM\Entity
  */
 class Locality
 {
     /**
      * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
      * Locality name, eg. New York.
      * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=100)
      */
     private $name;
 
     /**
      * Region.
-     *
-     * @ORM\ManyToOne(targetEntity="Region", inversedBy="localities")
-     * @ORM\JoinColumn(name="region_id", referencedColumnName="id")
      * @var Region
      */
     protected $region;
