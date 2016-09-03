@@ -18,8 +18,8 @@ class AddressExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'address_inline_formatter' => new \Twig_Function_Method(new InlineFormatter(), 'inlineFormatter'),
-            'address_envelope_formatter' => new \Twig_Function_Method(new EnvelopeFormatter(), 'envelopeFormatter'),
+            'address_inline_formatter' => new \Twig_SimpleFunction(new InlineFormatter(), 'inlineFormatter'),
+            'address_envelope_formatter' => new \Twig_SimpleFunction(new EnvelopeFormatter(), 'envelopeFormatter'),
         );
     }
 
