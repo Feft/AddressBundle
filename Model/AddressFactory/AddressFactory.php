@@ -18,8 +18,9 @@ class AddressFactory {
 
     /**
      * Get complete Address object from array (eg. from POST).
+     * Required values: countryName, countryAlpha2Code, countryLocalShortName, localityName, regionName, streetName, streetNumber, postalCode.
      *
-     * @param array $array Array of address string (key => value):
+     * @param array $array Array of address string (key => value).
      *
      * @return Address 
      */
