@@ -13,7 +13,7 @@ class AddressExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertCount(2, $functionsArray);
 
         foreach ($functionsArray as $a) {
-            $this->assertInstanceOf("\Twig_SimpleFunction", $a);
+            $this->assertInstanceOf("\Twig_SimpleFilter", $a);
         }
     }
 
