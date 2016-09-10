@@ -21,6 +21,8 @@ class CountryController extends Controller
      * @Route("/", name="country")
      * @Method("GET")
      * @Template()
+     *
+     * @return array
      */
     public function indexAction()
     {
@@ -39,6 +41,10 @@ class CountryController extends Controller
      * @Route("/", name="country_create")
      * @Method("POST")
      * @Template("FeftAddressBundle:Country:new.html.twig")
+     *
+     * @param Request $request
+     *
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function createAction(Request $request)
     {
@@ -85,6 +91,8 @@ class CountryController extends Controller
      * @Route("/new", name="country_new")
      * @Method("GET")
      * @Template()
+     *
+     * @return array
      */
     public function newAction()
     {
@@ -103,6 +111,10 @@ class CountryController extends Controller
      * @Route("/{id}", name="country_show")
      * @Method("GET")
      * @Template()
+     *
+     * @param $id country id to show
+     *
+     * @return array
      */
     public function showAction($id)
     {
@@ -128,6 +140,10 @@ class CountryController extends Controller
      * @Route("/{id}/edit", name="country_edit")
      * @Method("GET")
      * @Template()
+     *
+     * @param $id
+     *
+     * @return array
      */
     public function editAction($id)
     {
@@ -174,6 +190,11 @@ class CountryController extends Controller
      * @Route("/{id}", name="country_update")
      * @Method("PUT")
      * @Template("FeftAddressBundle:Country:edit.html.twig")
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function updateAction(Request $request, $id)
     {
@@ -207,6 +228,11 @@ class CountryController extends Controller
      *
      * @Route("/{id}", name="country_delete")
      * @Method("DELETE")
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request, $id)
     {

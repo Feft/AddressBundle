@@ -21,6 +21,8 @@ class AddressController extends Controller
      * @Route("/", name="address")
      * @Method("GET")
      * @Template()
+     *
+     * @return array
      */
     public function indexAction()
     {
@@ -39,6 +41,10 @@ class AddressController extends Controller
      * @Route("/", name="address_create")
      * @Method("POST")
      * @Template("FeftAddressBundle:Address:new.html.twig")
+     *
+     * @param Request $request
+     *
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function createAction(Request $request)
     {
@@ -103,6 +109,10 @@ class AddressController extends Controller
      * @Route("/{id}", name="address_show")
      * @Method("GET")
      * @Template()
+     *
+     * @param $id address id to show
+     *
+     * @return array
      */
     public function showAction($id)
     {
@@ -128,6 +138,9 @@ class AddressController extends Controller
      * @Route("/{id}/edit", name="address_edit")
      * @Method("GET")
      * @Template()
+     *
+     * @param $id address id to edit
+     * @return array
      */
     public function editAction($id)
     {
@@ -174,6 +187,11 @@ class AddressController extends Controller
      * @Route("/{id}", name="address_update")
      * @Method("PUT")
      * @Template("FeftAddressBundle:Address:edit.html.twig")
+     *
+     * @param Request $request
+     * @param $id address id to update
+     *
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function updateAction(Request $request, $id)
     {
@@ -207,6 +225,11 @@ class AddressController extends Controller
      *
      * @Route("/{id}", name="address_delete")
      * @Method("DELETE")
+     *
+     * @param Request $request
+     * @param $id address id to delete
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request, $id)
     {

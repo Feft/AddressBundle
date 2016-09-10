@@ -21,6 +21,8 @@ class PostalCodeController extends Controller
      * @Route("/", name="postalcode")
      * @Method("GET")
      * @Template()
+     *
+     * @return array
      */
     public function indexAction()
     {
@@ -39,6 +41,9 @@ class PostalCodeController extends Controller
      * @Route("/", name="postalcode_create")
      * @Method("POST")
      * @Template("FeftAddressBundle:PostalCode:new.html.twig")
+     *
+     * @param Request $request
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function createAction(Request $request)
     {
@@ -85,6 +90,8 @@ class PostalCodeController extends Controller
      * @Route("/new", name="postalcode_new")
      * @Method("GET")
      * @Template()
+     *
+     * @return array
      */
     public function newAction()
     {
@@ -103,6 +110,10 @@ class PostalCodeController extends Controller
      * @Route("/{id}", name="postalcode_show")
      * @Method("GET")
      * @Template()
+     *
+     * @param $id
+     *
+     * @return array
      */
     public function showAction($id)
     {
@@ -128,6 +139,10 @@ class PostalCodeController extends Controller
      * @Route("/{id}/edit", name="postalcode_edit")
      * @Method("GET")
      * @Template()
+     *
+     * @param $id
+     *
+     * @return array
      */
     public function editAction($id)
     {
@@ -174,6 +189,11 @@ class PostalCodeController extends Controller
      * @Route("/{id}", name="postalcode_update")
      * @Method("PUT")
      * @Template("FeftAddressBundle:PostalCode:edit.html.twig")
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return array|\Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function updateAction(Request $request, $id)
     {
@@ -207,6 +227,11 @@ class PostalCodeController extends Controller
      *
      * @Route("/{id}", name="postalcode_delete")
      * @Method("DELETE")
+     *
+     * @param Request $request
+     * @param $id
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function deleteAction(Request $request, $id)
     {
