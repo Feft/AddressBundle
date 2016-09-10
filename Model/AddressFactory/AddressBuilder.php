@@ -24,6 +24,8 @@ class AddressBuilder implements AddressBuilderInterface
      *
      * @param $data array Address data for builder
      *
+     * @throws \InvalidArgumentException if no array parameter
+     *
      * @return Address Address object
      */
     public function build($data)
@@ -65,14 +67,18 @@ class AddressBuilder implements AddressBuilderInterface
         $code->setCode($array["postalCode"]);
         $code->setValidator(Factory::getInstance($code, $country->getCode()));
 
+        # add country to address
         $address->setCountry($country);
+        #add region to address
         $address->setRegion($region);
+        # add locality (city) to address
         $address->setLocality($locality);
+        # add street to address
         $address->setStreet($street);
+        # add street number to address
         $address->setNumber($array["streetNumber"]);
+        # add zip to address
         $address->setPostalCode($code);
-
-        $address->setRegion($region);
 
         return $address;
     }
