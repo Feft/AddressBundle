@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Postal Code Form Type Class
+ */
 class PostalCodeType extends AbstractType
 {
     /**
@@ -15,10 +18,9 @@ class PostalCodeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('code')
-        ;
+            ->add('code');
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

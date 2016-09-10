@@ -5,7 +5,8 @@ namespace Feft\AddressBundle\Model\AddressFactory;
 /**
  * @inheritdoc
  */
-class JsonAddressBuilder extends AddressBuilder {
+class JsonAddressBuilder extends AddressBuilder
+{
 
     /**
      * Convert JSON encoded address data to Address object.

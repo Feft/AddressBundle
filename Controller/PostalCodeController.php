@@ -4,9 +4,6 @@ namespace Feft\AddressBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\PostalCode;
 use Feft\AddressBundle\Form\Type\PostalCodeType;
 
@@ -35,6 +32,7 @@ class PostalCodeController extends Controller
             'entities' => $entities,
         );
     }
+
     /**
      * Creates a new PostalCode entity.
      *
@@ -58,7 +56,7 @@ class PostalCodeController extends Controller
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -91,11 +89,11 @@ class PostalCodeController extends Controller
     public function newAction()
     {
         $entity = new PostalCode();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -119,7 +117,7 @@ class PostalCodeController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -145,19 +143,19 @@ class PostalCodeController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
 
     /**
-    * Creates a form to edit a PostalCode entity.
-    *
-    * @param PostalCode $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a PostalCode entity.
+     *
+     * @param PostalCode $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(PostalCode $entity)
     {
         $form = $this->createForm(new PostalCodeType(), $entity, array(
@@ -169,6 +167,7 @@ class PostalCodeController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing PostalCode entity.
      *
@@ -197,11 +196,12 @@ class PostalCodeController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
+
     /**
      * Deletes a PostalCode entity.
      *
@@ -241,7 +241,6 @@ class PostalCodeController extends Controller
             ->setAction($this->generateUrl('postalcode_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

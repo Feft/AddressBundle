@@ -7,7 +7,8 @@ use Feft\AddressBundle\Entity\Address;
  * Create complete address object from: array, json.
  *
  */
-class AddressFactory {
+class AddressFactory
+{
 
     /**
      * Get complete Address object from array (eg. from POST).

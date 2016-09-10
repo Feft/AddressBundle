@@ -4,9 +4,6 @@ namespace Feft\AddressBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\Region;
 use Feft\AddressBundle\Form\Type\RegionType;
 
@@ -35,6 +32,7 @@ class RegionController extends Controller
             'entities' => $entities,
         );
     }
+
     /**
      * Creates a new Region entity.
      *
@@ -58,7 +56,7 @@ class RegionController extends Controller
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -91,11 +89,11 @@ class RegionController extends Controller
     public function newAction()
     {
         $entity = new Region();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -119,7 +117,7 @@ class RegionController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -145,19 +143,19 @@ class RegionController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
 
     /**
-    * Creates a form to edit a Region entity.
-    *
-    * @param Region $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Region entity.
+     *
+     * @param Region $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Region $entity)
     {
         $form = $this->createForm(new RegionType(), $entity, array(
@@ -169,6 +167,7 @@ class RegionController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Region entity.
      *
@@ -197,11 +196,12 @@ class RegionController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
+
     /**
      * Deletes a Region entity.
      *
@@ -241,7 +241,6 @@ class RegionController extends Controller
             ->setAction($this->generateUrl('region_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

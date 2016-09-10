@@ -4,9 +4,6 @@ namespace Feft\AddressBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Feft\AddressBundle\Entity\Locality;
 use Feft\AddressBundle\Form\Type\LocalityType;
 
@@ -35,6 +32,7 @@ class LocalityController extends Controller
             'entities' => $entities,
         );
     }
+
     /**
      * Creates a new Locality entity.
      *
@@ -58,7 +56,7 @@ class LocalityController extends Controller
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -91,11 +89,11 @@ class LocalityController extends Controller
     public function newAction()
     {
         $entity = new Locality();
-        $form   = $this->createCreateForm($entity);
+        $form = $this->createCreateForm($entity);
 
         return array(
             'entity' => $entity,
-            'form'   => $form->createView(),
+            'form' => $form->createView(),
         );
     }
 
@@ -119,7 +117,7 @@ class LocalityController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'entity' => $entity,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -145,19 +143,19 @@ class LocalityController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
 
     /**
-    * Creates a form to edit a Locality entity.
-    *
-    * @param Locality $entity The entity
-    *
-    * @return \Symfony\Component\Form\Form The form
-    */
+     * Creates a form to edit a Locality entity.
+     *
+     * @param Locality $entity The entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
     private function createEditForm(Locality $entity)
     {
         $form = $this->createForm(new LocalityType(), $entity, array(
@@ -169,6 +167,7 @@ class LocalityController extends Controller
 
         return $form;
     }
+
     /**
      * Edits an existing Locality entity.
      *
@@ -197,11 +196,12 @@ class LocalityController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'entity' => $entity,
+            'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         );
     }
+
     /**
      * Deletes a Locality entity.
      *
@@ -241,7 +241,6 @@ class LocalityController extends Controller
             ->setAction($this->generateUrl('locality_delete', array('id' => $id)))
             ->setMethod('DELETE')
             ->add('submit', 'submit', array('label' => 'Delete'))
-            ->getForm()
-        ;
+            ->getForm();
     }
 }

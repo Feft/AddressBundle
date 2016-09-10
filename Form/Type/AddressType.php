@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ *  Address Form Type Class
+ */
 class AddressType extends AbstractType
 {
     /**
@@ -20,10 +23,9 @@ class AddressType extends AbstractType
             ->add('postalCode')
             ->add('locality')
             ->add('street')
-            ->add('number')
-        ;
+            ->add('number');
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

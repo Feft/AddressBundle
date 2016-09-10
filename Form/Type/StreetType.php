@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Street Form Type Class
+ */
 class StreetType extends AbstractType
 {
     /**
@@ -15,10 +18,9 @@ class StreetType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-        ;
+            ->add('name');
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

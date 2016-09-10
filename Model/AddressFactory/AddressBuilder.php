@@ -15,7 +15,8 @@ use Feft\AddressBundle\Model\PostalValidator\Factory;
  * Data required values: countryName, countryAlpha2Code, countryLocalShortName, localityName, regionName, streetName, streetNumber, postalCode.
  *
  */
-class AddressBuilder implements AddressBuilderInterface {
+class AddressBuilder implements AddressBuilderInterface
+{
 
     /**
      * Address object generate from data, eg. from array (like $_POST).
@@ -27,7 +28,7 @@ class AddressBuilder implements AddressBuilderInterface {
      */
     public function build($data)
     {
-        if(!is_array($data)) {
+        if (!is_array($data)) {
             throw new \InvalidArgumentException();
         }
 

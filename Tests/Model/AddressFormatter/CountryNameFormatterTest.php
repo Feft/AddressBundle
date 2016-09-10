@@ -1,10 +1,16 @@
 <?php
 
+/**
+ * Class CountryNameFormatterTest
+ */
 class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
 {
     private $countryNameFormatter;
     private $options;
     private $country;
+    /**
+     * @var \Feft\AddressBundle\Model\AddressFormatter\Config
+     */
     private $config;
 
     public function setUp()
@@ -25,8 +31,8 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
     public function testGetLineEndStringNoKey()
     {
         $this->assertSame("", $this->countryNameFormatter->getFormattedCountryName(
-            $this->country,
-            $this->options)
+                $this->country,
+                $this->options)
         );
     }
 
@@ -34,15 +40,15 @@ class CountryNameFormatterTest extends PHPUnit_Framework_TestCase
     {
         $this->options["showCountryName"] = false;
         $this->assertSame("", $this->countryNameFormatter->getFormattedCountryName(
-            $this->country,
-            $this->options
-        )
+                $this->country,
+                $this->options
+            )
         );
         $this->options["showCountryName"] = true;
         $this->assertSame("Poland", $this->countryNameFormatter->getFormattedCountryName(
-            $this->country,
-            $this->options
-        )
+                $this->country,
+                $this->options
+            )
         );
     }
 

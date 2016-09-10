@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Country Form Type Class
+ */
 class CountryType extends AbstractType
 {
     /**
@@ -17,10 +20,9 @@ class CountryType extends AbstractType
         $builder
             ->add('name')
             ->add('localShortName')
-            ->add('code')
-        ;
+            ->add('code');
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

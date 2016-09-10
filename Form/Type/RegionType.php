@@ -6,6 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
+/**
+ * Region Form Type Class
+ */
 class RegionType extends AbstractType
 {
     /**
@@ -16,10 +19,9 @@ class RegionType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('country')
-        ;
+            ->add('country');
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */

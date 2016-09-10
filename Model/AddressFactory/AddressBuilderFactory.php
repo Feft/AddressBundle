@@ -17,9 +17,9 @@ class AddressBuilderFactory
      */
     public function getInstance($data)
     {
-        if(is_array($data)) {
+        if (is_array($data)) {
             $builder = new AddressBuilder();
-        } elseif(is_string($data)) {
+        } elseif (is_string($data)) {
             $builder = new JsonAddressBuilder();
         } else {
             throw new \InvalidArgumentException();

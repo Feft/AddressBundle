@@ -1,6 +1,8 @@
 <?php
 
-
+/**
+ * Class AddressFactoryTest
+ */
 class AddressFactoryTest extends \PHPUnit_Framework_TestCase
 {
     private $factory;
@@ -56,7 +58,8 @@ class AddressFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("PL", $address->getCountry()->getCode());
         $this->assertEquals("śląskie", $address->getRegion()->getName());
         $this->assertEquals("43-100", $address->getPostalCode()->getCode());
-        $this->assertInstanceOf("\Feft\AddressBundle\Model\PostalValidator\PostalCodeValidatorInterface", $address->getPostalCode()->getValidator());
+        $this->assertInstanceOf("\Feft\AddressBundle\Model\PostalValidator\PostalCodeValidatorInterface",
+            $address->getPostalCode()->getValidator());
     }
 
 }
