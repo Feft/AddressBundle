@@ -18,6 +18,11 @@ abstract class AbstractPostalCodeValidator implements PostalCodeValidatorInterfa
      */
     protected $postalCode;
 
+    /**
+     * Create object
+     *
+     * @param PostalCode $postalCode Postal code to validate.
+     */
     public function __construct(PostalCode $postalCode)
     {
         $this->postalCode = $postalCode;

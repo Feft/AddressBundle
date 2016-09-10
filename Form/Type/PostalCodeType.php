@@ -12,6 +12,8 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 class PostalCodeType extends AbstractType
 {
     /**
+     * @inheritdoc
+     *
      * @param FormBuilderInterface $builder
      * @param array $options
      */
@@ -22,6 +24,8 @@ class PostalCodeType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @param OptionsResolverInterface $resolver
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
@@ -32,6 +36,8 @@ class PostalCodeType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @return string
      */
     public function getName()

@@ -7,11 +7,13 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- * Country Form Type Class
+ * Country Form Type Class - build form
  */
 class CountryType extends AbstractType
 {
     /**
+     * @inheritdoc
+     *
      * @param FormBuilderInterface $builder
      * @param array $options
      */
@@ -24,6 +26,8 @@ class CountryType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @param OptionsResolverInterface $resolver
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
@@ -34,6 +38,8 @@ class CountryType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @return string
      */
     public function getName()

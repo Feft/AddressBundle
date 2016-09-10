@@ -12,6 +12,8 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 class RegionType extends AbstractType
 {
     /**
+     * @inheritdoc
+     *
      * @param FormBuilderInterface $builder
      * @param array $options
      */
@@ -23,6 +25,8 @@ class RegionType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @param OptionsResolverInterface $resolver
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
@@ -33,6 +37,8 @@ class RegionType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @return string
      */
     public function getName()

@@ -7,11 +7,13 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
- *  Address Form Type Class
+ *  Address Form Type Class - build form
  */
 class AddressType extends AbstractType
 {
     /**
+     * @inheritdoc
+     *
      * @param FormBuilderInterface $builder
      * @param array $options
      */
@@ -27,6 +29,8 @@ class AddressType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @param OptionsResolverInterface $resolver
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
@@ -37,6 +41,8 @@ class AddressType extends AbstractType
     }
 
     /**
+     * @inheritdoc
+     *
      * @return string
      */
     public function getName()
