@@ -46,8 +46,32 @@ $ php app/console doctrine:schema:update --force
 CRUD operations
 ---------------
 Every entity has CRUD Controller to show/add/edit/delete operation, eg. to manage countries use link like this: http://localhost/address/web/app.php/country/
+
 Usage
 -----
+Simple use:
+```php
+        $factory = new AddressFactory();
+
+        $addressData = array(
+            "countryName" => "Poland",
+            "countryAlpha2Code" => "PL",
+            "countryLocalShortName" => "Polska",
+            "localityName" => "Tychy",
+            "regionName" => "śląskie",
+            "streetName" => "Freedom",
+            "postalCode" => "43-100",
+            "streetNumber" => "20 m. 21",
+        );
+
+        $address = $factory->getAddressObject($addressData);
+
+        return array(
+            'address' => $address,
+        );
+```
+For more examples see unit tests folder.
+
 Controller file:  
 ```php
   use Feft\AddressBundle\Entity\Address;
