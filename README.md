@@ -5,6 +5,8 @@ Address
 
 International mailing address created in Symfony2. Format examples on [http://www.bitboost.com/ref/international-address-formats.html#Formats][3]
 
+The code is compatible with php 7.1 and 5.6 versions.
+
 Installation
 ------------
 
