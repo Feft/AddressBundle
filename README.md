@@ -23,6 +23,16 @@ Now run the `install` command.
 ```sh
 $ php composer.phar install
 ```
+or use Makefile (only if you are using Docker):
+```sh
+make composer
+```
+PhpUnit
+-------
+To run unittests use command (only if you are using Docker):
+```sh
+make php5.6-phpunit5
+```
 Enable the bundle
 -----------------
 Enable the bundle in the kernel:
