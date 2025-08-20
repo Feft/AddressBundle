@@ -1,3 +1,4 @@
 <?php
 
-echo 'test jako taki';
+echo 'test jako taki albo taki';
+
